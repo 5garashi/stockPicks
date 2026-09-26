@@ -1,0 +1,1313 @@
+{
+ "version": 2,
+ "app_version": "1.6.0",
+ "generated_at": "2026-09-27 06:35",
+ "show_numbers": true,
+ "policy": {
+  "preset": {
+   "ja": "バランス",
+   "en": "Balanced"
+  },
+  "weights": [
+   {
+    "key": "per",
+    "weight": 2
+   },
+   {
+    "key": "pbr",
+    "weight": 1
+   },
+   {
+    "key": "div",
+    "weight": 2
+   },
+   {
+    "key": "roe",
+    "weight": 2
+   },
+   {
+    "key": "growth",
+    "weight": 2
+   },
+   {
+    "key": "equity",
+    "weight": 1
+   }
+  ],
+  "filters": {
+   "ja": [
+    "PER15倍以下"
+   ],
+   "en": [
+    "PER 15x or less"
+   ]
+  }
+ },
+ "metrics": {
+  "per": {
+   "label": {
+    "ja": "PER",
+    "en": "PER"
+   },
+   "unit": {
+    "ja": "倍",
+    "en": "x"
+   },
+   "name": {
+    "ja": "PER（ピーイーアール）",
+    "en": "PER (price-to-earnings ratio)"
+   },
+   "short": {
+    "ja": "株価が1株当たり利益の何年分か。低いほど利益に対して割安とされる。目安は15倍前後。",
+    "en": "How many years of earnings the share price represents. Lower is considered cheaper. Around 15x is typical."
+   },
+   "benchmark": {
+    "ja": "15倍前後が標準。10倍未満は割安、20倍超は割高とされる",
+    "en": "About 15x is standard; below 10x is considered cheap, above 20x expensive"
+   }
+  },
+  "pbr": {
+   "label": {
+    "ja": "PBR",
+    "en": "PBR"
+   },
+   "unit": {
+    "ja": "倍",
+    "en": "x"
+   },
+   "name": {
+    "ja": "PBR（ピービーアール）",
+    "en": "PBR (price-to-book ratio)"
+   },
+   "short": {
+    "ja": "株価が1株当たり純資産の何倍か。1倍が解散価値の目安で、1倍割れは割安とされる。",
+    "en": "How many times book value the share price is. 1x is the liquidation-value benchmark; below 1x is considered cheap."
+   },
+   "benchmark": {
+    "ja": "1倍が解散価値。1倍未満は割安とされる",
+    "en": "1x is liquidation value; below 1x is considered cheap"
+   }
+  },
+  "div": {
+   "label": {
+    "ja": "配当利回り",
+    "en": "Div. yield"
+   },
+   "unit": {
+    "ja": "%",
+    "en": "%"
+   },
+   "name": {
+    "ja": "配当利回り",
+    "en": "Dividend yield"
+   },
+   "short": {
+    "ja": "株価に対して1年間に受け取れる配当の割合。3%以上で高配当とされることが多い。",
+    "en": "Annual dividends as a share of the price. 3% or more is often considered high."
+   },
+   "benchmark": {
+    "ja": "2〜3%が標準。3%以上で高配当とされる",
+    "en": "2%–3% is standard; 3% or more is considered high"
+   }
+  },
+  "roe": {
+   "label": {
+    "ja": "ROE",
+    "en": "ROE"
+   },
+   "unit": {
+    "ja": "%",
+    "en": "%"
+   },
+   "name": {
+    "ja": "ROE（アールオーイー）",
+    "en": "ROE (return on equity)"
+   },
+   "short": {
+    "ja": "株主のお金でどれだけ効率よく稼いだか。8%以上が目安、10%以上で優良とされることが多い。",
+    "en": "How efficiently the company earns on shareholders' money. 8% or more is the benchmark; 10% or more is often considered excellent."
+   },
+   "benchmark": {
+    "ja": "8%以上が目安。10%以上で優良とされる",
+    "en": "8% or more is the benchmark; 10% or more is considered excellent"
+   }
+  },
+  "growth": {
+   "label": {
+    "ja": "売上成長率",
+    "en": "Revenue growth"
+   },
+   "unit": {
+    "ja": "%",
+    "en": "%"
+   },
+   "name": {
+    "ja": "売上成長率",
+    "en": "Revenue growth"
+   },
+   "short": {
+    "ja": "売上が前年からどれだけ伸びたか。10%以上で高成長、20%以上で急成長とされることが多い。",
+    "en": "How much revenue grew from a year earlier. 10% or more is considered high growth, 20% or more rapid."
+   },
+   "benchmark": {
+    "ja": "10%以上で高成長、20%以上で急成長とされる",
+    "en": "10% or more is considered high growth, 20% or more rapid"
+   }
+  },
+  "equity": {
+   "label": {
+    "ja": "自己資本比率",
+    "en": "Equity ratio"
+   },
+   "unit": {
+    "ja": "%",
+    "en": "%"
+   },
+   "name": {
+    "ja": "自己資本比率",
+    "en": "Equity ratio"
+   },
+   "short": {
+    "ja": "資産のうち返す必要のないお金の割合。40%以上で安定、20%未満は注意とされることが多い。",
+    "en": "The share of assets funded by money that need not be repaid. 40% or more is considered stable; below 20% calls for caution."
+   },
+   "benchmark": {
+    "ja": "40%以上で安定、20%未満は注意（金融業は除く）",
+    "en": "40% or more is considered stable; below 20% calls for caution (excluding financials)"
+   }
+  }
+ },
+ "sources": {
+  "watch": {
+   "ja": "ウォッチ",
+   "en": "Watchlist"
+  },
+  "claude": {
+   "ja": "Claude",
+   "en": "Claude"
+  },
+  "chatgpt": {
+   "ja": "ChatGPT",
+   "en": "ChatGPT"
+  }
+ },
+ "stocks": [
+  {
+   "rank": 1,
+   "code": "CF",
+   "name": "CF Industries Holdings, Inc.",
+   "sector": "Agricultural Inputs",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 70,
+   "price": 114.67,
+   "currency": "USD",
+   "good": {
+    "ja": [
+     "PER割安",
+     "高ROE",
+     "高成長"
+    ],
+    "en": [
+     "Low PER",
+     "High ROE",
+     "High growth"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "PBR割高"
+    ],
+    "en": [
+     "High PBR"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 8.5004,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 3.0242,
+     "kind": "warn",
+     "judge": {
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
+     }
+    },
+    "div": {
+     "value": 2.093,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 29.867,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 17.6,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 34.3413,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 2,
+   "code": "7203.T",
+   "name": "Toyota Motor Corporation",
+   "sector": "Auto Manufacturers",
+   "source": [
+    "watch"
+   ],
+   "score": 68,
+   "price": 2989.5,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "PER割安",
+     "PBR1倍割れ",
+     "高配当",
+     "高ROE",
+     "高成長"
+    ],
+    "en": [
+     "Low PER",
+     "PBR below 1x",
+     "High yield",
+     "High ROE",
+     "High growth"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 8.5105,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 0.9489,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 3.345,
+     "kind": "good",
+     "judge": {
+      "ja": "高配当とされる水準",
+      "en": "Considered high yield"
+     }
+    },
+    "roe": {
+     "value": 12.404,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 10.4,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 37.8298,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 3,
+   "code": "1928.T",
+   "name": "Sekisui House, Ltd.",
+   "sector": "Residential Construction",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 63,
+   "price": 3369.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "PER割安",
+     "PBR1倍割れ",
+     "高配当",
+     "高ROE",
+     "財務安定"
+    ],
+    "en": [
+     "Low PER",
+     "PBR below 1x",
+     "High yield",
+     "High ROE",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "減収"
+    ],
+    "en": [
+     "Revenue decline"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 8.5471,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 0.9711,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 4.3336,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準（減配リスクも確認）",
+      "en": "High (check dividend-cut risk)"
+     }
+    },
+    "roe": {
+     "value": 12.262,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": -5.8,
+     "kind": "warn",
+     "judge": {
+      "ja": "減収",
+      "en": "Revenue decline"
+     }
+    },
+    "equity": {
+     "value": 42.7355,
+     "kind": "good",
+     "judge": {
+      "ja": "安定とされる水準",
+      "en": "Considered stable"
+     }
+    }
+   }
+  },
+  {
+   "rank": 4,
+   "code": "8591.T",
+   "name": "ORIX Corporation",
+   "sector": "Financial Conglomerates",
+   "source": [
+    "watch",
+    "chatgpt"
+   ],
+   "score": 62,
+   "price": 6171.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高ROE",
+     "高成長"
+    ],
+    "en": [
+     "High ROE",
+     "High growth"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 10.9648,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.4349,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 2.7485,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 14.035,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 17.4,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 24.8989,
+     "kind": "na",
+     "judge": {
+      "ja": "金融業のため目安の対象外",
+      "en": "Financials: benchmark not applicable"
+     }
+    }
+   }
+  },
+  {
+   "rank": 5,
+   "code": "VZ",
+   "name": "Verizon Communications Inc.",
+   "sector": "Telecom Services",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 59,
+   "price": 47.08,
+   "currency": "USD",
+   "good": {
+    "ja": [
+     "高配当",
+     "高ROE"
+    ],
+    "en": [
+     "High yield",
+     "High ROE"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "減収"
+    ],
+    "en": [
+     "Revenue decline"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 12.2604,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.8823,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 6.011,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準（減配リスクも確認）",
+      "en": "High (check dividend-cut risk)"
+     }
+    },
+    "roe": {
+     "value": 15.842,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": -0.7,
+     "kind": "warn",
+     "judge": {
+      "ja": "減収",
+      "en": "Revenue decline"
+     }
+    },
+    "equity": {
+     "value": 25.8399,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 6,
+   "code": "BMY",
+   "name": "Bristol-Myers Squibb Company",
+   "sector": "Drug Manufacturers - General",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 55,
+   "price": 62.86,
+   "currency": "USD",
+   "good": {
+    "ja": [
+     "高配当",
+     "高ROE"
+    ],
+    "en": [
+     "High yield",
+     "High ROE"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "PBR割高"
+    ],
+    "en": [
+     "High PBR"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 13.8458,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 5.7538,
+     "kind": "warn",
+     "judge": {
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
+     }
+    },
+    "div": {
+     "value": 4.0089,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準（減配リスクも確認）",
+      "en": "High (check dividend-cut risk)"
+     }
+    },
+    "roe": {
+     "value": 46.599,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 5.7,
+     "kind": "mid",
+     "judge": {
+      "ja": "安定成長",
+      "en": "Steady growth"
+     }
+    },
+    "equity": {
+     "value": 20.5169,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 7,
+   "code": "HPQ",
+   "name": "HP Inc.",
+   "sector": "Computer Hardware",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 51,
+   "price": 31.3,
+   "currency": "USD",
+   "good": {
+    "ja": [
+     "高配当",
+     "高成長"
+    ],
+    "en": [
+     "High yield",
+     "High growth"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "PBR算出不可",
+     "財務に注意"
+    ],
+    "en": [
+     "PBR n/a",
+     "Weak finances"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 11.9466,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": -306.8627,
+     "kind": "warn",
+     "judge": {
+      "ja": "債務超過など（算出不可）",
+      "en": "Negative equity etc. (not meaningful)"
+     }
+    },
+    "div": {
+     "value": 3.8339,
+     "kind": "good",
+     "judge": {
+      "ja": "高配当とされる水準",
+      "en": "Considered high yield"
+     }
+    },
+    "roe": {
+     "value": null,
+     "kind": "na",
+     "judge": {
+      "ja": "データなし",
+      "en": "No data"
+     }
+    },
+    "growth": {
+     "value": 12.5,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": -0.8284,
+     "kind": "warn",
+     "judge": {
+      "ja": "低い水準（財務に注意）",
+      "en": "Low (watch financial safety)"
+     }
+    }
+   }
+  },
+  {
+   "rank": 8,
+   "code": "1605.T",
+   "name": "Inpex Corporation",
+   "sector": "Oil & Gas E&P",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 51,
+   "price": 3857.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "PBR1倍割れ",
+     "財務安定"
+    ],
+    "en": [
+     "PBR below 1x",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "減収"
+    ],
+    "en": [
+     "Revenue decline"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 10.4167,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 0.8785,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 2.9038,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 9.271,
+     "kind": "mid",
+     "judge": {
+      "ja": "目安の8%を満たす",
+      "en": "Meets the 8% benchmark"
+     }
+    },
+    "growth": {
+     "value": -2.6,
+     "kind": "warn",
+     "judge": {
+      "ja": "減収",
+      "en": "Revenue decline"
+     }
+    },
+    "equity": {
+     "value": 61.3709,
+     "kind": "good",
+     "judge": {
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
+     }
+    }
+   }
+  },
+  {
+   "rank": 9,
+   "code": "3407.T",
+   "name": "Asahi Kasei Corporation",
+   "sector": "Conglomerates",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 44,
+   "price": 1645.5,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高成長",
+     "財務安定"
+    ],
+    "en": [
+     "High growth",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 14.0641,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.0465,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 2.674,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 9.751,
+     "kind": "mid",
+     "judge": {
+      "ja": "目安の8%を満たす",
+      "en": "Meets the 8% benchmark"
+     }
+    },
+    "growth": {
+     "value": 11.9,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 50.4709,
+     "kind": "good",
+     "judge": {
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
+     }
+    }
+   }
+  },
+  {
+   "rank": 10,
+   "code": "9432.T",
+   "name": "NTT, Inc.",
+   "sector": "Telecom Services",
+   "source": [
+    "watch"
+   ],
+   "score": 43,
+   "price": 176.1,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高配当",
+     "高ROE",
+     "高成長"
+    ],
+    "en": [
+     "High yield",
+     "High ROE",
+     "High growth"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 13.9651,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.4545,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 3.0664,
+     "kind": "good",
+     "judge": {
+      "ja": "高配当とされる水準",
+      "en": "Considered high yield"
+     }
+    },
+    "roe": {
+     "value": 10.713,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 10.9,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 20.8205,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 11,
+   "code": "C",
+   "name": "Citigroup Inc.",
+   "sector": "Banks - Diversified",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 30,
+   "price": 134.28,
+   "currency": "USD",
+   "good": {
+    "ja": [
+     "高成長"
+    ],
+    "en": [
+     "High growth"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 14.4698,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.1703,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 1.9958,
+     "kind": "mid",
+     "judge": {
+      "ja": "低めの水準",
+      "en": "Lowish"
+     }
+    },
+    "roe": {
+     "value": 8.529,
+     "kind": "mid",
+     "judge": {
+      "ja": "目安の8%を満たす",
+      "en": "Meets the 8% benchmark"
+     }
+    },
+    "growth": {
+     "value": 15.5,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 7.9893,
+     "kind": "na",
+     "judge": {
+      "ja": "金融業のため目安の対象外",
+      "en": "Financials: benchmark not applicable"
+     }
+    }
+   }
+  }
+ ],
+ "excluded": [
+  {
+   "code": "6758.T",
+   "name": "Sony Group Corporation"
+  },
+  {
+   "code": "8306.T",
+   "name": "Mitsubishi UFJ Financial Group, Inc."
+  },
+  {
+   "code": "8058.T",
+   "name": "Mitsubishi Corporation"
+  },
+  {
+   "code": "6861.T",
+   "name": "Keyence Corporation"
+  },
+  {
+   "code": "4063.T",
+   "name": "Shin-Etsu Chemical Co., Ltd."
+  },
+  {
+   "code": "8035.T",
+   "name": "Tokyo Electron Limited"
+  },
+  {
+   "code": "2914.T",
+   "name": "Japan Tobacco Inc."
+  },
+  {
+   "code": "9433.T",
+   "name": "KDDI Corporation"
+  },
+  {
+   "code": "5108.T",
+   "name": "Bridgestone Corporation"
+  }
+ ],
+ "ai": {
+  "claude": {
+   "label": "Claude",
+   "picks": [],
+   "error": {
+    "ja": "今回は候補を取得できませんでした。",
+    "en": "Suggestions could not be obtained this time."
+   }
+  },
+  "chatgpt": {
+   "label": "ChatGPT",
+   "picks": [
+    {
+     "code": "1605.T",
+     "name": {
+      "ja": "Inpex Corporation",
+      "en": "Inpex Corporation"
+     },
+     "reason": {
+      "ja": "2026年9月25日終値3,857円、会社予想PER8.79倍、予想配当利回り2.90%。中間期の自己資本比率60.8%と財務に厚みがあり、低PERと配当を重視するバランス方針の資源株候補。",
+      "en": "At the September 25, 2026 close of ¥3,857, company-forecast P/E was 8.79 and prospective dividend yield was 2.90%. Its first-half equity ratio of 60.8% provides financial strength, making it an energy candidate for a balanced approach emphasizing valuation and dividends. [Valuation](https://finance.yahoo.co.jp/quote/1605.T), [results](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260807/20260806512941.pdf)."
+     },
+     "risk": {
+      "ja": "中間期売上収益は前年同期比4.6%減。原油・天然ガス価格の下落や円高で利益が減り、低PERの前提が崩れる可能性。",
+      "en": "First-half revenue fell 4.6% year over year. Lower oil and gas prices or a stronger yen could reduce earnings and undermine the apparent valuation discount."
+     },
+     "rank": 8,
+     "score": 51
+    },
+    {
+     "code": "1928.T",
+     "name": {
+      "ja": "Sekisui House, Ltd.",
+      "en": "Sekisui House, Ltd."
+     },
+     "reason": {
+      "ja": "2026年9月25日終値3,369円、会社予想PER9.75倍、予想配当利回り4.30%、実績ROE11.32%。中間期営業利益は16.0%増で、割安さと配当、収益性を併せて調べる住宅株候補。",
+      "en": "At the September 25, 2026 close of ¥3,369, company-forecast P/E was 9.75, prospective dividend yield was 4.30%, and reported ROE was 11.32%. First-half operating profit rose 16.0%, supporting further research into its combination of valuation, income and profitability. [Valuation](https://finance.yahoo.co.jp/quote/1928.T), [results](https://finance.yahoo.co.jp/quote/1928.T/financials)."
+     },
+     "risk": {
+      "ja": "中間期売上高は2.5%減、国際事業は20.8%減。住宅ローン金利の上昇や海外住宅需要の低迷が業績を圧迫し得る。",
+      "en": "First-half sales fell 2.5%, while international sales declined 20.8%. Higher mortgage rates and weak overseas housing demand could continue to pressure operating performance."
+     },
+     "rank": 3,
+     "score": 63
+    },
+    {
+     "code": "3407.T",
+     "name": {
+      "ja": "Asahi Kasei Corporation",
+      "en": "Asahi Kasei Corporation"
+     },
+     "reason": {
+      "ja": "2026年9月25日終値1,645.5円、会社予想PER13.92倍、予想配当利回り2.67%、実績ROE8.04%。第1四半期売上高は11.9%増で、素材・住宅・医療の事業分散と成長を評価する候補。",
+      "en": "At the September 25, 2026 close of ¥1,645.5, company-forecast P/E was 13.92, prospective dividend yield was 2.67%, and reported ROE was 8.04%. First-quarter sales grew 11.9%. Its materials, housing and healthcare businesses offer diversification alongside growth worth examining. [Valuation](https://finance.yahoo.co.jp/quote/3407.T), [results](https://finance.yahoo.co.jp/quote/3407.T/financials)."
+     },
+     "risk": {
+      "ja": "買収に伴い無形資産と借入が増加。第1四半期は増益でも営業キャッシュフローが減少しており、利益の現金化に注意。",
+      "en": "Acquisitions increased intangible assets and borrowings. First-quarter operating cash flow declined despite higher earnings, making cash conversion and the financial burden of acquisitions important concerns."
+     },
+     "rank": 9,
+     "score": 44
+    },
+    {
+     "code": "5108.T",
+     "name": {
+      "ja": "ブリヂストン",
+      "en": "Bridgestone Corporation"
+     },
+     "reason": {
+      "ja": "2026年9月25日終値3,839円、会社予想PER14.26倍、予想配当利回り3.26%。中間期売上収益は9.7%増、自己資本比率64.1%。成長と配当、財務健全性を組み合わせて評価できるタイヤ株。",
+      "en": "At the September 25, 2026 close of ¥3,839, company-forecast P/E was 14.26 and prospective dividend yield was 3.26%. First-half revenue increased 9.7%, while the equity ratio reached 64.1%. This tire manufacturer combines sales growth, dividends and balance-sheet strength. [Valuation](https://finance.yahoo.co.jp/quote/5108.T), [results](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260807/20260709590254.pdf)."
+     },
+     "risk": {
+      "ja": "大幅増益には前年の工場再編費用の反動も寄与。原材料高やタイヤ需要の減速で、現在の利益成長率を維持できない可能性。",
+      "en": "The sharp earnings increase partly reflects lower factory restructuring charges compared with last year. Higher raw-material costs or slowing tire demand could prevent that growth rate from continuing."
+     },
+     "rank": null,
+     "score": null
+    },
+    {
+     "code": "8591.T",
+     "name": {
+      "ja": "ORIX Corporation",
+      "en": "ORIX Corporation"
+     },
+     "reason": {
+      "ja": "2026年9月25日終値6,171円、会社予想PER12.77倍、予想配当利回り3.04%、実績ROE10.44%。第1四半期営業収益は17.4%増で、配当と収益性を重視する総合金融の調査候補。",
+      "en": "At the September 25, 2026 close of ¥6,171, company-forecast P/E was 12.77, prospective dividend yield was 3.04%, and reported ROE was 10.44%. First-quarter operating revenue increased 17.4%, making this diversified financial company worth investigating for income and profitability. [Valuation](https://finance.yahoo.co.jp/quote/8591.T), [results](https://finance.yahoo.co.jp/quote/8591.T/financials)."
+     },
+     "risk": {
+      "ja": "第1四半期の大幅増益はキオクシア関連の投資損益に依存。評価益の反転や金利上昇で、利益と配当の見通しが変動し得る。",
+      "en": "The sharp first-quarter earnings increase depended on Kioxia-related investment gains. Reversals in valuation gains or higher interest rates could materially change earnings and dividend expectations."
+     },
+     "rank": 4,
+     "score": 62
+    },
+    {
+     "code": "VZ",
+     "name": {
+      "ja": "Verizon Communications Inc.",
+      "en": "Verizon Communications Inc."
+     },
+     "reason": {
+      "ja": "2026年9月25日終値47.08ドル、実績PER12.27倍、配当利回り6.01%、ROE15.84%。直近12か月売上高は1.4%増で、高成長より配当と収益性を重視する通信株の調査候補。",
+      "en": "At the September 25, 2026 close of $47.08, trailing P/E was 12.27, dividend yield was 6.01%, and ROE was 15.84%. Trailing twelve-month revenue increased 1.4%, making Verizon a telecom research candidate emphasizing income and profitability over rapid growth. [Financials](https://stockanalysis.com/stocks/vz/), [ratios](https://stockanalysis.com/stocks/vz/statistics/)."
+     },
+     "risk": {
+      "ja": "有利子負債・自己資本倍率は1.84倍で、負債負担に注意。売上成長は小さく、金利上昇や競争激化が配当余力を圧迫し得る。",
+      "en": "Debt to equity is 1.84, indicating a substantial debt burden. Modest revenue growth, higher interest rates and intensified competition could constrain the cash available for dividends."
+     },
+     "rank": 5,
+     "score": 59
+    },
+    {
+     "code": "C",
+     "name": {
+      "ja": "Citigroup Inc.",
+      "en": "Citigroup Inc."
+     },
+     "reason": {
+      "ja": "2026年9月25日終値134.28ドル、実績PER14.60倍、PBR1.17倍、配当利回り2.00%。第2四半期純利益は45%増で、利益改善と比較的低い資産評価を併せて検討する銀行株候補。",
+      "en": "At the September 25, 2026 close of $134.28, trailing P/E was 14.60, price to book was 1.17, and dividend yield was 2.00%. Second-quarter net income increased 45%, supporting research into improving earnings alongside a relatively modest book-value valuation. [Ratios](https://stockanalysis.com/stocks/c/statistics/), [results](https://www.citigroup.com/global/news/press-release/2026/second-quarter-2026-results-key-metrics)."
+     },
+     "risk": {
+      "ja": "実績ROEは8.53%で収益性の改善余地が残る。景気悪化による信用損失や規制対応費用が増えると、増益が鈍化し得る。",
+      "en": "Reported ROE of 8.53% leaves room for profitability improvement. Higher credit losses during an economic slowdown or increased regulatory remediation costs could weaken earnings growth."
+     },
+     "rank": 11,
+     "score": 30
+    },
+    {
+     "code": "HPQ",
+     "name": {
+      "ja": "HP Inc.",
+      "en": "HP Inc."
+     },
+     "reason": {
+      "ja": "2026年9月25日終値31.30ドル、実績PER11.92倍、配当利回り3.83%。2026年度第3四半期売上高は12.5%増。低PERと配当、売上成長を評価できるが、財務面の弱さを伴う技術株候補。",
+      "en": "At the September 25, 2026 close of $31.30, trailing P/E was 11.92 and dividend yield was 3.83%. Fiscal third-quarter revenue grew 12.5%. Its low earnings multiple, income and sales growth warrant research, although balance-sheet weakness limits its appeal. [Valuation](https://stockanalysis.com/stocks/hpq/), [results](https://www.sec.gov/Archives/edgar/data/47217/000004721726000048/hp73126exhibit991q326.htm)."
+     },
+     "risk": {
+      "ja": "自己資本はマイナスで、PBRとROEは通常の比較に適さない。直近12か月純利益も7.2%減で、増収が増益につながっていない。",
+      "en": "Equity is negative, making conventional P/B and ROE comparisons unsuitable. Trailing twelve-month net income also fell 7.2%, showing that revenue growth has not translated into higher earnings."
+     },
+     "rank": 7,
+     "score": 51
+    },
+    {
+     "code": "CF",
+     "name": {
+      "ja": "CF Industries Holdings, Inc.",
+      "en": "CF Industries Holdings, Inc."
+     },
+     "reason": {
+      "ja": "2026年9月25日終値114.67ドル、実績PER8.53倍、配当利回り2.09%、ROE29.87%。直近12か月売上高は20.0%増で、低PERと成長・収益性を重視する窒素肥料メーカーの候補。",
+      "en": "At the September 25, 2026 close of $114.67, trailing P/E was 8.53, dividend yield was 2.09%, and ROE was 29.87%. Trailing twelve-month sales increased 20.0%, making this nitrogen fertilizer producer a candidate combining low earnings valuation with growth and profitability. [Financials](https://stockanalysis.com/stocks/cf/), [ratios](https://stockanalysis.com/stocks/cf/statistics/)."
+     },
+     "risk": {
+      "ja": "肥料価格と天然ガス費用で利益が大きく変動する。PBRは3.02倍で、好況期の高利益がPERを低く見せている可能性に注意。",
+      "en": "Fertilizer prices and natural-gas costs can cause substantial earnings swings. With P/B at 3.02, investors should examine whether cyclical peak profits are making the P/E look unusually low."
+     },
+     "rank": 1,
+     "score": 70
+    },
+    {
+     "code": "BMY",
+     "name": {
+      "ja": "Bristol-Myers Squibb Company",
+      "en": "Bristol-Myers Squibb Company"
+     },
+     "reason": {
+      "ja": "2026年9月25日終値62.86ドル、実績PER13.84倍、配当利回り4.01%。第2四半期売上高は6%増の130億ドルで、通期見通しも引き上げ。配当と事業成長を併せて調べる医薬品株候補。",
+      "en": "At the September 25, 2026 close of $62.86, trailing P/E was 13.84 and dividend yield was 4.01%. Second-quarter revenue rose 6% to $13.0 billion, and management raised its full-year outlook. It offers a pharmaceutical research candidate combining dividends and business growth. [Valuation](https://stockanalysis.com/stocks/bmy/), [results](https://www.sec.gov/Archives/edgar/data/14272/000001427226000018/a2026q2ex991-filing.htm)."
+     },
+     "risk": {
+      "ja": "主力薬の後発品競争や薬価引き下げが収益を圧迫し得る。有利子負債・自己資本倍率2.02倍で、高ROEには財務負担も伴う。",
+      "en": "Generic competition and drug-price reductions could pressure major products. Debt to equity of 2.02 means its high ROE comes with a substantial financial burden."
+     },
+     "rank": 6,
+     "score": 55
+    }
+   ]
+  }
+ },
+ "ai_generated_at": "2026-09-27 05:50",
+ "ai_conditions": {
+  "market": {
+   "ja": "日本株と米国株",
+   "en": "Japanese and US stocks"
+  },
+  "preset": {
+   "ja": "バランス",
+   "en": "Balanced"
+  },
+  "extra": ""
+ },
+ "commentary": null,
+ "titles": {
+  "ja": "銘柄えらび帳 公開版",
+  "en": "Stock Picks Notebook — Public Edition"
+ }
+}

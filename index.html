@@ -1,0 +1,486 @@
+<!doctype html>
+<!--
+  ファイル名 / File: index.html（銘柄えらび帳 公開版 / Stock Picks Notebook, public edition）
+  概要 / Description: PCで集計した銘柄候補を閲覧するページ（日本語・英語）/ Bilingual read-only view of the aggregated candidates
+  作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+  ライセンス / License: MIT（ロゴ・シンボルマークは CC BY-ND 4.0）
+  SPDX-License-Identifier: MIT
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>銘柄えらび帳 公開版</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F9EFCB; --head:#FFE699; --ink:#385723; --steel:#7B4A21; --volt:#B92613;
+  --volt-deep:#8C1B0D; --card:#FFFDF2; --line:#DFCF9A; --ok:#3E6B2A; --cream:#FFF3D6;
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  --mono:ui-monospace,"SF Mono",Consolas,"Noto Sans Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:600;
+  font-size:15px;line-height:1.7;padding-bottom:env(safe-area-inset-bottom,0)}
+:focus-visible{outline:3px solid var(--volt);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+a{color:var(--volt-deep)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--head);padding:10px 14px;z-index:10}
+.skip:focus{left:8px;top:8px}
+
+/* ヘッダー: head色の帯＋下辺に ink 3px。左にロゴ、右に言語切り替えとシンボルマーク */
+header.site{background:var(--head);border-bottom:3px solid var(--ink);padding:calc(12px + env(safe-area-inset-top,0)) 16px 12px}
+.bar{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:12px 16px;flex-wrap:wrap}
+.logo{height:40px;width:auto;flex:none}
+.titles{flex:1 1 220px;min-width:0}
+h1{margin:0;font-size:clamp(19px,4.2vw,26px);font-weight:800;letter-spacing:.05em;line-height:1.35}
+html[lang=en] h1{letter-spacing:.02em}
+.updated{margin:2px 0 0;color:var(--steel);font-weight:700;font-size:13px;letter-spacing:.02em}
+.langs{display:flex;gap:0;flex:none}
+.langs button{font:inherit;font-size:14px;font-weight:700;min-height:44px;min-width:44px;padding:0 14px;background:var(--card);
+  color:var(--ink);border:1px solid var(--ink);cursor:pointer}
+.langs button+button{border-left:0}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--head)}
+.mark{height:34px;width:auto;flex:none}
+@media (max-width:560px){.logo{height:30px}.mark{display:none}.langs{order:3}}
+
+main{max-width:1080px;margin:0 auto;padding:18px 16px 40px}
+nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+nav.jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;background:var(--card);
+  color:var(--ink);border:1px solid var(--ink);text-decoration:none;font-weight:700;letter-spacing:.03em}
+nav.jump a:hover{background:var(--head)}
+
+section{margin:0 0 34px}
+h2{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.04em;margin:0 0 12px;
+  padding-bottom:6px;border-bottom:2px solid var(--ink)}
+html[lang=en] h2{letter-spacing:.01em}
+h2 img{height:18px;width:auto}
+.lead{margin:0 0 12px;color:var(--steel);font-weight:700;font-size:14px;max-width:60em}
+.policy{background:var(--card);border:1px solid var(--line);padding:12px 14px;margin:0 0 18px;font-size:14px}
+.policy dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:4px 14px}
+.policy dt{color:var(--steel);font-weight:800;letter-spacing:.06em}
+.policy dd{margin:0}
+
+/* 操作 */
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end;margin:0 0 14px}
+.ctl label,.ctl .lbl{display:block;font-size:12px;font-weight:800;color:var(--steel);letter-spacing:.06em;margin-bottom:4px}
+select,input[type=search]{font:inherit;font-size:15px;color:var(--ink);background:var(--card);border:1px solid var(--ink);
+  min-height:44px;padding:0 10px;border-radius:0}
+input[type=search]{width:min(260px,100%)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:inherit;font-size:14px;font-weight:700;min-height:44px;padding:0 14px;background:var(--card);color:var(--ink);
+  border:1px solid var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--head)}
+.count{color:var(--steel);font-weight:700;font-size:14px;margin:0 0 8px}
+
+/* 銘柄カード */
+ol.stocks{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.stock{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--ink);padding:14px 16px}
+.top{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:start}
+.rank{font-family:var(--mono);font-weight:800;font-size:15px;background:var(--volt);color:var(--cream);
+  min-width:34px;height:34px;display:grid;place-items:center;padding:0 6px}
+.name{font-size:17px;font-weight:800;line-height:1.45;margin:0;word-break:break-word}
+.sub{color:var(--steel);font-weight:700;font-size:13px;margin:2px 0 0}
+.score{text-align:right;font-family:var(--mono);font-weight:800;color:var(--volt-deep);font-size:26px;line-height:1}
+.score small{display:block;font-family:var(--sans);font-size:11px;color:var(--steel);font-weight:700;letter-spacing:.06em;margin-top:4px}
+.meter{grid-column:1/-1;height:6px;background:var(--line);margin:8px 0 2px}
+.meter i{display:block;height:100%;background:var(--ink)}
+.tags{margin:10px 0 0;display:grid;gap:4px;font-size:14px}
+.tags p{margin:0}
+.tl{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;padding:1px 8px;margin-right:8px}
+.tl.good{background:var(--ok);color:var(--cream)}
+.tl.warn{background:var(--volt-deep);color:var(--cream)}
+dl.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px;margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--line)}
+@media (min-width:720px){dl.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:980px){dl.metrics{grid-template-columns:repeat(6,minmax(0,1fr))}}
+dl.metrics div{min-width:0}
+dl.metrics dt{font-size:12px;color:var(--steel);font-weight:800;letter-spacing:.04em}
+dl.metrics dd{margin:0}
+.val{font-family:var(--mono);font-weight:800;color:var(--volt-deep);font-size:16px}
+.jd{display:block;font-size:12.5px;font-weight:700;line-height:1.45}
+.jd.good{color:var(--ok)} .jd.mid{color:var(--ink)} .jd.warn{color:var(--volt-deep)} .jd.na{color:var(--steel)}
+.legend{font-size:13px;color:var(--steel);font-weight:700;margin:8px 0 0}
+.empty{background:var(--card);border:1px dashed var(--ink);padding:18px;text-align:center}
+
+/* AI候補 */
+.ai-grid{display:grid;gap:18px}
+@media (min-width:900px){.ai-grid{grid-template-columns:1fr 1fr}}
+.ai-col h3{margin:0 0 8px;font-size:17px;font-weight:800;letter-spacing:.04em}
+ol.picks{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:p}
+ol.picks li{background:var(--card);border:1px solid var(--line);padding:12px 14px;counter-increment:p}
+ol.picks .pn{font-weight:800;font-size:16px}
+ol.picks .pn::before{content:counter(p) ". ";font-family:var(--mono);color:var(--volt-deep)}
+ol.picks .pm{color:var(--steel);font-size:13px;font-weight:700;margin:0 0 4px}
+ol.picks p{margin:4px 0 0;font-size:14px}
+.both{background:var(--card);border:1px solid var(--ink);border-left-width:5px;padding:10px 14px;margin:0 0 14px;font-size:14px}
+
+/* 解説・目安 */
+.commentary{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--ink);padding:14px 16px;
+  white-space:pre-wrap;font-size:14.5px;line-height:1.8;max-width:62em}
+ul.guide{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:720px){ul.guide{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){ul.guide{grid-template-columns:1fr 1fr 1fr}}
+ul.guide li{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--ink);padding:12px 14px}
+ul.guide h3{margin:0 0 6px;font-size:16px;font-weight:800;letter-spacing:.03em}
+ul.guide .bm{margin:0 0 6px;color:var(--volt-deep);font-weight:800;font-size:14px}
+ul.guide .ex{margin:0;font-size:13.5px;color:var(--steel);font-weight:700}
+
+footer.site{border-top:3px solid var(--ink);background:var(--card);padding:18px 16px 28px}
+footer .in{max-width:1080px;margin:0 auto;font-size:13px;color:var(--steel);font-weight:700}
+footer p{margin:0 0 8px}
+.sign{letter-spacing:.06em}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip"></a>
+<header class="site">
+  <div class="bar">
+    <img class="logo" id="logo" src="assets/5garashi_logotype_outlined.svg" alt="">
+    <div class="titles">
+      <h1 id="title"></h1>
+      <p class="updated" id="updated"></p>
+    </div>
+    <div class="langs" role="group" aria-label="言語 / Language" id="langs">
+      <button type="button" data-lang="ja" lang="ja">日本語</button>
+      <button type="button" data-lang="en" lang="en">English</button>
+    </div>
+    <img class="mark" src="assets/5garashi_mark_simple.svg" alt="" aria-hidden="true">
+  </div>
+</header>
+
+<main id="main">
+  <nav class="jump" id="jump"></nav>
+
+  <section id="ranking" aria-labelledby="h-ranking">
+    <h2 id="h-ranking"><img src="assets/5garashi_mark_simple.svg" alt="" aria-hidden="true"><span data-i="nav.ranking"></span></h2>
+    <p class="lead" data-i="rank.lead"></p>
+    <div class="policy" id="policy"></div>
+    <div class="controls">
+      <div class="ctl">
+        <label for="sort" data-i="sort"></label>
+        <select id="sort"></select>
+      </div>
+      <div class="ctl">
+        <span class="lbl" id="src-lbl" data-i="source"></span>
+        <div class="seg" role="group" aria-labelledby="src-lbl" id="srcs"></div>
+      </div>
+      <div class="ctl">
+        <label for="q" data-i="search"></label>
+        <input type="search" id="q" autocomplete="off">
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ol class="stocks" id="stocks"></ol>
+    <p class="legend" data-i="legend"></p>
+    <p class="legend" id="excluded"></p>
+  </section>
+
+  <section id="ai" aria-labelledby="h-ai" hidden>
+    <h2 id="h-ai"><img src="assets/5garashi_mark_simple.svg" alt="" aria-hidden="true"><span data-i="nav.ai"></span></h2>
+    <p class="lead" id="ai-lead"></p>
+    <div id="ai-both"></div>
+    <div class="ai-grid" id="ai-grid"></div>
+  </section>
+
+  <section id="commentary" aria-labelledby="h-com" hidden>
+    <h2 id="h-com"><img src="assets/5garashi_mark_simple.svg" alt="" aria-hidden="true"><span data-i="nav.comment"></span></h2>
+    <p class="lead" id="com-lead"></p>
+    <div class="commentary" id="com-text"></div>
+  </section>
+
+  <section id="guide" aria-labelledby="h-guide">
+    <h2 id="h-guide"><img src="assets/5garashi_mark_simple.svg" alt="" aria-hidden="true"><span data-i="guide.title"></span></h2>
+    <p class="lead" data-i="guide.lead"></p>
+    <ul class="guide" id="guide-body"></ul>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <p data-i="disclaimer"></p>
+    <p class="sign">5garashi.com設計事務所 / 5garashi.com Design Office — <a href="https://www.5garashi.com">https://www.5garashi.com</a> — <span id="ver"></span></p>
+  </div>
+</footer>
+
+<script id="data" type="application/json">{"version":2,"app_version":"1.6.0","generated_at":"2026-09-27 06:35","show_numbers":true,"policy":{"preset":{"ja":"バランス","en":"Balanced"},"weights":[{"key":"per","weight":2},{"key":"pbr","weight":1},{"key":"div","weight":2},{"key":"roe","weight":2},{"key":"growth","weight":2},{"key":"equity","weight":1}],"filters":{"ja":["PER15倍以下"],"en":["PER 15x or less"]}},"metrics":{"per":{"label":{"ja":"PER","en":"PER"},"unit":{"ja":"倍","en":"x"},"name":{"ja":"PER（ピーイーアール）","en":"PER (price-to-earnings ratio)"},"short":{"ja":"株価が1株当たり利益の何年分か。低いほど利益に対して割安とされる。目安は15倍前後。","en":"How many years of earnings the share price represents. Lower is considered cheaper. Around 15x is typical."},"benchmark":{"ja":"15倍前後が標準。10倍未満は割安、20倍超は割高とされる","en":"About 15x is standard; below 10x is considered cheap, above 20x expensive"}},"pbr":{"label":{"ja":"PBR","en":"PBR"},"unit":{"ja":"倍","en":"x"},"name":{"ja":"PBR（ピービーアール）","en":"PBR (price-to-book ratio)"},"short":{"ja":"株価が1株当たり純資産の何倍か。1倍が解散価値の目安で、1倍割れは割安とされる。","en":"How many times book value the share price is. 1x is the liquidation-value benchmark; below 1x is considered cheap."},"benchmark":{"ja":"1倍が解散価値。1倍未満は割安とされる","en":"1x is liquidation value; below 1x is considered cheap"}},"div":{"label":{"ja":"配当利回り","en":"Div. yield"},"unit":{"ja":"%","en":"%"},"name":{"ja":"配当利回り","en":"Dividend yield"},"short":{"ja":"株価に対して1年間に受け取れる配当の割合。3%以上で高配当とされることが多い。","en":"Annual dividends as a share of the price. 3% or more is often considered high."},"benchmark":{"ja":"2〜3%が標準。3%以上で高配当とされる","en":"2%–3% is standard; 3% or more is considered high"}},"roe":{"label":{"ja":"ROE","en":"ROE"},"unit":{"ja":"%","en":"%"},"name":{"ja":"ROE（アールオーイー）","en":"ROE (return on equity)"},"short":{"ja":"株主のお金でどれだけ効率よく稼いだか。8%以上が目安、10%以上で優良とされることが多い。","en":"How efficiently the company earns on shareholders' money. 8% or more is the benchmark; 10% or more is often considered excellent."},"benchmark":{"ja":"8%以上が目安。10%以上で優良とされる","en":"8% or more is the benchmark; 10% or more is considered excellent"}},"growth":{"label":{"ja":"売上成長率","en":"Revenue growth"},"unit":{"ja":"%","en":"%"},"name":{"ja":"売上成長率","en":"Revenue growth"},"short":{"ja":"売上が前年からどれだけ伸びたか。10%以上で高成長、20%以上で急成長とされることが多い。","en":"How much revenue grew from a year earlier. 10% or more is considered high growth, 20% or more rapid."},"benchmark":{"ja":"10%以上で高成長、20%以上で急成長とされる","en":"10% or more is considered high growth, 20% or more rapid"}},"equity":{"label":{"ja":"自己資本比率","en":"Equity ratio"},"unit":{"ja":"%","en":"%"},"name":{"ja":"自己資本比率","en":"Equity ratio"},"short":{"ja":"資産のうち返す必要のないお金の割合。40%以上で安定、20%未満は注意とされることが多い。","en":"The share of assets funded by money that need not be repaid. 40% or more is considered stable; below 20% calls for caution."},"benchmark":{"ja":"40%以上で安定、20%未満は注意（金融業は除く）","en":"40% or more is considered stable; below 20% calls for caution (excluding financials)"}}},"sources":{"watch":{"ja":"ウォッチ","en":"Watchlist"},"claude":{"ja":"Claude","en":"Claude"},"chatgpt":{"ja":"ChatGPT","en":"ChatGPT"}},"stocks":[{"rank":1,"code":"CF","name":"CF Industries Holdings, Inc.","sector":"Agricultural Inputs","source":["chatgpt"],"score":70,"price":114.67,"currency":"USD","good":{"ja":["PER割安","高ROE","高成長"],"en":["Low PER","High ROE","High growth"]},"warn":{"ja":["PBR割高"],"en":["High PBR"]},"metrics":{"per":{"value":8.5004,"kind":"good","judge":{"ja":"割安とされる水準","en":"Considered cheap"}},"pbr":{"value":3.0242,"kind":"warn","judge":{"ja":"割高とされる水準","en":"Considered expensive"}},"div":{"value":2.093,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"roe":{"value":29.867,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":17.6,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":34.3413,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}}}},{"rank":2,"code":"7203.T","name":"Toyota Motor Corporation","sector":"Auto Manufacturers","source":["watch"],"score":68,"price":2989.5,"currency":"JPY","good":{"ja":["PER割安","PBR1倍割れ","高配当","高ROE","高成長"],"en":["Low PER","PBR below 1x","High yield","High ROE","High growth"]},"warn":{"ja":[],"en":[]},"metrics":{"per":{"value":8.5105,"kind":"good","judge":{"ja":"割安とされる水準","en":"Considered cheap"}},"pbr":{"value":0.9489,"kind":"good","judge":{"ja":"1倍割れ（解散価値を下回る）","en":"Below 1x (under liquidation value)"}},"div":{"value":3.345,"kind":"good","judge":{"ja":"高配当とされる水準","en":"Considered high yield"}},"roe":{"value":12.404,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":10.4,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":37.8298,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}}}},{"rank":3,"code":"1928.T","name":"Sekisui House, Ltd.","sector":"Residential Construction","source":["chatgpt"],"score":63,"price":3369.0,"currency":"JPY","good":{"ja":["PER割安","PBR1倍割れ","高配当","高ROE","財務安定"],"en":["Low PER","PBR below 1x","High yield","High ROE","Stable finances"]},"warn":{"ja":["減収"],"en":["Revenue decline"]},"metrics":{"per":{"value":8.5471,"kind":"good","judge":{"ja":"割安とされる水準","en":"Considered cheap"}},"pbr":{"value":0.9711,"kind":"good","judge":{"ja":"1倍割れ（解散価値を下回る）","en":"Below 1x (under liquidation value)"}},"div":{"value":4.3336,"kind":"good","judge":{"ja":"高い水準（減配リスクも確認）","en":"High (check dividend-cut risk)"}},"roe":{"value":12.262,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":-5.8,"kind":"warn","judge":{"ja":"減収","en":"Revenue decline"}},"equity":{"value":42.7355,"kind":"good","judge":{"ja":"安定とされる水準","en":"Considered stable"}}}},{"rank":4,"code":"8591.T","name":"ORIX Corporation","sector":"Financial Conglomerates","source":["watch","chatgpt"],"score":62,"price":6171.0,"currency":"JPY","good":{"ja":["高ROE","高成長"],"en":["High ROE","High growth"]},"warn":{"ja":[],"en":[]},"metrics":{"per":{"value":10.9648,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":1.4349,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"div":{"value":2.7485,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"roe":{"value":14.035,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":17.4,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":24.8989,"kind":"na","judge":{"ja":"金融業のため目安の対象外","en":"Financials: benchmark not applicable"}}}},{"rank":5,"code":"VZ","name":"Verizon Communications Inc.","sector":"Telecom Services","source":["chatgpt"],"score":59,"price":47.08,"currency":"USD","good":{"ja":["高配当","高ROE"],"en":["High yield","High ROE"]},"warn":{"ja":["減収"],"en":["Revenue decline"]},"metrics":{"per":{"value":12.2604,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":1.8823,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"div":{"value":6.011,"kind":"good","judge":{"ja":"高い水準（減配リスクも確認）","en":"High (check dividend-cut risk)"}},"roe":{"value":15.842,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":-0.7,"kind":"warn","judge":{"ja":"減収","en":"Revenue decline"}},"equity":{"value":25.8399,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}}}},{"rank":6,"code":"BMY","name":"Bristol-Myers Squibb Company","sector":"Drug Manufacturers - General","source":["chatgpt"],"score":55,"price":62.86,"currency":"USD","good":{"ja":["高配当","高ROE"],"en":["High yield","High ROE"]},"warn":{"ja":["PBR割高"],"en":["High PBR"]},"metrics":{"per":{"value":13.8458,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":5.7538,"kind":"warn","judge":{"ja":"割高とされる水準","en":"Considered expensive"}},"div":{"value":4.0089,"kind":"good","judge":{"ja":"高い水準（減配リスクも確認）","en":"High (check dividend-cut risk)"}},"roe":{"value":46.599,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":5.7,"kind":"mid","judge":{"ja":"安定成長","en":"Steady growth"}},"equity":{"value":20.5169,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}}}},{"rank":7,"code":"HPQ","name":"HP Inc.","sector":"Computer Hardware","source":["chatgpt"],"score":51,"price":31.3,"currency":"USD","good":{"ja":["高配当","高成長"],"en":["High yield","High growth"]},"warn":{"ja":["PBR算出不可","財務に注意"],"en":["PBR n/a","Weak finances"]},"metrics":{"per":{"value":11.9466,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":-306.8627,"kind":"warn","judge":{"ja":"債務超過など（算出不可）","en":"Negative equity etc. (not meaningful)"}},"div":{"value":3.8339,"kind":"good","judge":{"ja":"高配当とされる水準","en":"Considered high yield"}},"roe":{"value":null,"kind":"na","judge":{"ja":"データなし","en":"No data"}},"growth":{"value":12.5,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":-0.8284,"kind":"warn","judge":{"ja":"低い水準（財務に注意）","en":"Low (watch financial safety)"}}}},{"rank":8,"code":"1605.T","name":"Inpex Corporation","sector":"Oil & Gas E&P","source":["chatgpt"],"score":51,"price":3857.0,"currency":"JPY","good":{"ja":["PBR1倍割れ","財務安定"],"en":["PBR below 1x","Stable finances"]},"warn":{"ja":["減収"],"en":["Revenue decline"]},"metrics":{"per":{"value":10.4167,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":0.8785,"kind":"good","judge":{"ja":"1倍割れ（解散価値を下回る）","en":"Below 1x (under liquidation value)"}},"div":{"value":2.9038,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"roe":{"value":9.271,"kind":"mid","judge":{"ja":"目安の8%を満たす","en":"Meets the 8% benchmark"}},"growth":{"value":-2.6,"kind":"warn","judge":{"ja":"減収","en":"Revenue decline"}},"equity":{"value":61.3709,"kind":"good","judge":{"ja":"健全とされる水準","en":"Considered sound"}}}},{"rank":9,"code":"3407.T","name":"Asahi Kasei Corporation","sector":"Conglomerates","source":["chatgpt"],"score":44,"price":1645.5,"currency":"JPY","good":{"ja":["高成長","財務安定"],"en":["High growth","Stable finances"]},"warn":{"ja":[],"en":[]},"metrics":{"per":{"value":14.0641,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":1.0465,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"div":{"value":2.674,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"roe":{"value":9.751,"kind":"mid","judge":{"ja":"目安の8%を満たす","en":"Meets the 8% benchmark"}},"growth":{"value":11.9,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":50.4709,"kind":"good","judge":{"ja":"健全とされる水準","en":"Considered sound"}}}},{"rank":10,"code":"9432.T","name":"NTT, Inc.","sector":"Telecom Services","source":["watch"],"score":43,"price":176.1,"currency":"JPY","good":{"ja":["高配当","高ROE","高成長"],"en":["High yield","High ROE","High growth"]},"warn":{"ja":[],"en":[]},"metrics":{"per":{"value":13.9651,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":1.4545,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"div":{"value":3.0664,"kind":"good","judge":{"ja":"高配当とされる水準","en":"Considered high yield"}},"roe":{"value":10.713,"kind":"good","judge":{"ja":"高い水準","en":"High"}},"growth":{"value":10.9,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":20.8205,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}}}},{"rank":11,"code":"C","name":"Citigroup Inc.","sector":"Banks - Diversified","source":["chatgpt"],"score":30,"price":134.28,"currency":"USD","good":{"ja":["高成長"],"en":["High growth"]},"warn":{"ja":[],"en":[]},"metrics":{"per":{"value":14.4698,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"pbr":{"value":1.1703,"kind":"mid","judge":{"ja":"標準的な水準","en":"Standard"}},"div":{"value":1.9958,"kind":"mid","judge":{"ja":"低めの水準","en":"Lowish"}},"roe":{"value":8.529,"kind":"mid","judge":{"ja":"目安の8%を満たす","en":"Meets the 8% benchmark"}},"growth":{"value":15.5,"kind":"good","judge":{"ja":"高成長とされる水準","en":"Considered high growth"}},"equity":{"value":7.9893,"kind":"na","judge":{"ja":"金融業のため目安の対象外","en":"Financials: benchmark not applicable"}}}}],"excluded":[{"code":"6758.T","name":"Sony Group Corporation"},{"code":"8306.T","name":"Mitsubishi UFJ Financial Group, Inc."},{"code":"8058.T","name":"Mitsubishi Corporation"},{"code":"6861.T","name":"Keyence Corporation"},{"code":"4063.T","name":"Shin-Etsu Chemical Co., Ltd."},{"code":"8035.T","name":"Tokyo Electron Limited"},{"code":"2914.T","name":"Japan Tobacco Inc."},{"code":"9433.T","name":"KDDI Corporation"},{"code":"5108.T","name":"Bridgestone Corporation"}],"ai":{"claude":{"label":"Claude","picks":[],"error":{"ja":"今回は候補を取得できませんでした。","en":"Suggestions could not be obtained this time."}},"chatgpt":{"label":"ChatGPT","picks":[{"code":"1605.T","name":{"ja":"Inpex Corporation","en":"Inpex Corporation"},"reason":{"ja":"2026年9月25日終値3,857円、会社予想PER8.79倍、予想配当利回り2.90%。中間期の自己資本比率60.8%と財務に厚みがあり、低PERと配当を重視するバランス方針の資源株候補。","en":"At the September 25, 2026 close of ¥3,857, company-forecast P/E was 8.79 and prospective dividend yield was 2.90%. Its first-half equity ratio of 60.8% provides financial strength, making it an energy candidate for a balanced approach emphasizing valuation and dividends. [Valuation](https://finance.yahoo.co.jp/quote/1605.T), [results](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260807/20260806512941.pdf)."},"risk":{"ja":"中間期売上収益は前年同期比4.6%減。原油・天然ガス価格の下落や円高で利益が減り、低PERの前提が崩れる可能性。","en":"First-half revenue fell 4.6% year over year. Lower oil and gas prices or a stronger yen could reduce earnings and undermine the apparent valuation discount."},"rank":8,"score":51},{"code":"1928.T","name":{"ja":"Sekisui House, Ltd.","en":"Sekisui House, Ltd."},"reason":{"ja":"2026年9月25日終値3,369円、会社予想PER9.75倍、予想配当利回り4.30%、実績ROE11.32%。中間期営業利益は16.0%増で、割安さと配当、収益性を併せて調べる住宅株候補。","en":"At the September 25, 2026 close of ¥3,369, company-forecast P/E was 9.75, prospective dividend yield was 4.30%, and reported ROE was 11.32%. First-half operating profit rose 16.0%, supporting further research into its combination of valuation, income and profitability. [Valuation](https://finance.yahoo.co.jp/quote/1928.T), [results](https://finance.yahoo.co.jp/quote/1928.T/financials)."},"risk":{"ja":"中間期売上高は2.5%減、国際事業は20.8%減。住宅ローン金利の上昇や海外住宅需要の低迷が業績を圧迫し得る。","en":"First-half sales fell 2.5%, while international sales declined 20.8%. Higher mortgage rates and weak overseas housing demand could continue to pressure operating performance."},"rank":3,"score":63},{"code":"3407.T","name":{"ja":"Asahi Kasei Corporation","en":"Asahi Kasei Corporation"},"reason":{"ja":"2026年9月25日終値1,645.5円、会社予想PER13.92倍、予想配当利回り2.67%、実績ROE8.04%。第1四半期売上高は11.9%増で、素材・住宅・医療の事業分散と成長を評価する候補。","en":"At the September 25, 2026 close of ¥1,645.5, company-forecast P/E was 13.92, prospective dividend yield was 2.67%, and reported ROE was 8.04%. First-quarter sales grew 11.9%. Its materials, housing and healthcare businesses offer diversification alongside growth worth examining. [Valuation](https://finance.yahoo.co.jp/quote/3407.T), [results](https://finance.yahoo.co.jp/quote/3407.T/financials)."},"risk":{"ja":"買収に伴い無形資産と借入が増加。第1四半期は増益でも営業キャッシュフローが減少しており、利益の現金化に注意。","en":"Acquisitions increased intangible assets and borrowings. First-quarter operating cash flow declined despite higher earnings, making cash conversion and the financial burden of acquisitions important concerns."},"rank":9,"score":44},{"code":"5108.T","name":{"ja":"ブリヂストン","en":"Bridgestone Corporation"},"reason":{"ja":"2026年9月25日終値3,839円、会社予想PER14.26倍、予想配当利回り3.26%。中間期売上収益は9.7%増、自己資本比率64.1%。成長と配当、財務健全性を組み合わせて評価できるタイヤ株。","en":"At the September 25, 2026 close of ¥3,839, company-forecast P/E was 14.26 and prospective dividend yield was 3.26%. First-half revenue increased 9.7%, while the equity ratio reached 64.1%. This tire manufacturer combines sales growth, dividends and balance-sheet strength. [Valuation](https://finance.yahoo.co.jp/quote/5108.T), [results](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260807/20260709590254.pdf)."},"risk":{"ja":"大幅増益には前年の工場再編費用の反動も寄与。原材料高やタイヤ需要の減速で、現在の利益成長率を維持できない可能性。","en":"The sharp earnings increase partly reflects lower factory restructuring charges compared with last year. Higher raw-material costs or slowing tire demand could prevent that growth rate from continuing."},"rank":null,"score":null},{"code":"8591.T","name":{"ja":"ORIX Corporation","en":"ORIX Corporation"},"reason":{"ja":"2026年9月25日終値6,171円、会社予想PER12.77倍、予想配当利回り3.04%、実績ROE10.44%。第1四半期営業収益は17.4%増で、配当と収益性を重視する総合金融の調査候補。","en":"At the September 25, 2026 close of ¥6,171, company-forecast P/E was 12.77, prospective dividend yield was 3.04%, and reported ROE was 10.44%. First-quarter operating revenue increased 17.4%, making this diversified financial company worth investigating for income and profitability. [Valuation](https://finance.yahoo.co.jp/quote/8591.T), [results](https://finance.yahoo.co.jp/quote/8591.T/financials)."},"risk":{"ja":"第1四半期の大幅増益はキオクシア関連の投資損益に依存。評価益の反転や金利上昇で、利益と配当の見通しが変動し得る。","en":"The sharp first-quarter earnings increase depended on Kioxia-related investment gains. Reversals in valuation gains or higher interest rates could materially change earnings and dividend expectations."},"rank":4,"score":62},{"code":"VZ","name":{"ja":"Verizon Communications Inc.","en":"Verizon Communications Inc."},"reason":{"ja":"2026年9月25日終値47.08ドル、実績PER12.27倍、配当利回り6.01%、ROE15.84%。直近12か月売上高は1.4%増で、高成長より配当と収益性を重視する通信株の調査候補。","en":"At the September 25, 2026 close of $47.08, trailing P/E was 12.27, dividend yield was 6.01%, and ROE was 15.84%. Trailing twelve-month revenue increased 1.4%, making Verizon a telecom research candidate emphasizing income and profitability over rapid growth. [Financials](https://stockanalysis.com/stocks/vz/), [ratios](https://stockanalysis.com/stocks/vz/statistics/)."},"risk":{"ja":"有利子負債・自己資本倍率は1.84倍で、負債負担に注意。売上成長は小さく、金利上昇や競争激化が配当余力を圧迫し得る。","en":"Debt to equity is 1.84, indicating a substantial debt burden. Modest revenue growth, higher interest rates and intensified competition could constrain the cash available for dividends."},"rank":5,"score":59},{"code":"C","name":{"ja":"Citigroup Inc.","en":"Citigroup Inc."},"reason":{"ja":"2026年9月25日終値134.28ドル、実績PER14.60倍、PBR1.17倍、配当利回り2.00%。第2四半期純利益は45%増で、利益改善と比較的低い資産評価を併せて検討する銀行株候補。","en":"At the September 25, 2026 close of $134.28, trailing P/E was 14.60, price to book was 1.17, and dividend yield was 2.00%. Second-quarter net income increased 45%, supporting research into improving earnings alongside a relatively modest book-value valuation. [Ratios](https://stockanalysis.com/stocks/c/statistics/), [results](https://www.citigroup.com/global/news/press-release/2026/second-quarter-2026-results-key-metrics)."},"risk":{"ja":"実績ROEは8.53%で収益性の改善余地が残る。景気悪化による信用損失や規制対応費用が増えると、増益が鈍化し得る。","en":"Reported ROE of 8.53% leaves room for profitability improvement. Higher credit losses during an economic slowdown or increased regulatory remediation costs could weaken earnings growth."},"rank":11,"score":30},{"code":"HPQ","name":{"ja":"HP Inc.","en":"HP Inc."},"reason":{"ja":"2026年9月25日終値31.30ドル、実績PER11.92倍、配当利回り3.83%。2026年度第3四半期売上高は12.5%増。低PERと配当、売上成長を評価できるが、財務面の弱さを伴う技術株候補。","en":"At the September 25, 2026 close of $31.30, trailing P/E was 11.92 and dividend yield was 3.83%. Fiscal third-quarter revenue grew 12.5%. Its low earnings multiple, income and sales growth warrant research, although balance-sheet weakness limits its appeal. [Valuation](https://stockanalysis.com/stocks/hpq/), [results](https://www.sec.gov/Archives/edgar/data/47217/000004721726000048/hp73126exhibit991q326.htm)."},"risk":{"ja":"自己資本はマイナスで、PBRとROEは通常の比較に適さない。直近12か月純利益も7.2%減で、増収が増益につながっていない。","en":"Equity is negative, making conventional P/B and ROE comparisons unsuitable. Trailing twelve-month net income also fell 7.2%, showing that revenue growth has not translated into higher earnings."},"rank":7,"score":51},{"code":"CF","name":{"ja":"CF Industries Holdings, Inc.","en":"CF Industries Holdings, Inc."},"reason":{"ja":"2026年9月25日終値114.67ドル、実績PER8.53倍、配当利回り2.09%、ROE29.87%。直近12か月売上高は20.0%増で、低PERと成長・収益性を重視する窒素肥料メーカーの候補。","en":"At the September 25, 2026 close of $114.67, trailing P/E was 8.53, dividend yield was 2.09%, and ROE was 29.87%. Trailing twelve-month sales increased 20.0%, making this nitrogen fertilizer producer a candidate combining low earnings valuation with growth and profitability. [Financials](https://stockanalysis.com/stocks/cf/), [ratios](https://stockanalysis.com/stocks/cf/statistics/)."},"risk":{"ja":"肥料価格と天然ガス費用で利益が大きく変動する。PBRは3.02倍で、好況期の高利益がPERを低く見せている可能性に注意。","en":"Fertilizer prices and natural-gas costs can cause substantial earnings swings. With P/B at 3.02, investors should examine whether cyclical peak profits are making the P/E look unusually low."},"rank":1,"score":70},{"code":"BMY","name":{"ja":"Bristol-Myers Squibb Company","en":"Bristol-Myers Squibb Company"},"reason":{"ja":"2026年9月25日終値62.86ドル、実績PER13.84倍、配当利回り4.01%。第2四半期売上高は6%増の130億ドルで、通期見通しも引き上げ。配当と事業成長を併せて調べる医薬品株候補。","en":"At the September 25, 2026 close of $62.86, trailing P/E was 13.84 and dividend yield was 4.01%. Second-quarter revenue rose 6% to $13.0 billion, and management raised its full-year outlook. It offers a pharmaceutical research candidate combining dividends and business growth. [Valuation](https://stockanalysis.com/stocks/bmy/), [results](https://www.sec.gov/Archives/edgar/data/14272/000001427226000018/a2026q2ex991-filing.htm)."},"risk":{"ja":"主力薬の後発品競争や薬価引き下げが収益を圧迫し得る。有利子負債・自己資本倍率2.02倍で、高ROEには財務負担も伴う。","en":"Generic competition and drug-price reductions could pressure major products. Debt to equity of 2.02 means its high ROE comes with a substantial financial burden."},"rank":6,"score":55}]}},"ai_generated_at":"2026-09-27 05:50","ai_conditions":{"market":{"ja":"日本株と米国株","en":"Japanese and US stocks"},"preset":{"ja":"バランス","en":"Balanced"},"extra":""},"commentary":null,"titles":{"ja":"銘柄えらび帳 公開版","en":"Stock Picks Notebook — Public Edition"}}</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("data").textContent);
+  var K = ["per", "pbr", "div", "roe", "growth", "equity"];
+  var MARK = { good: "◎", mid: "○", warn: "△", na: "−" };
+
+  // 画面の文言 / UI strings
+  var UI = {
+    ja: {
+      "skip": "本文へスキップ",
+      "updated": "更新: {t}（日本時間・PCで集計）",
+      "nav.label": "ページ内の移動", "nav.ranking": "候補ランキング", "nav.ai": "AIのおすすめ候補",
+      "nav.comment": "Claudeの解説", "nav.guide": "指標の目安",
+      "rank.lead": "スコアは、この一覧に並んだ銘柄どうしを比べた相対評価（0〜100点）です。「強み」「注意」と各指標の判定は、一般的な目安と比べた結果です。",
+      "pol.preset": "方針", "pol.weights": "重み", "pol.filters": "絞り込み", "pol.none": "なし", "pol.range": "（0〜5）",
+      "sort": "並べ替え", "sort.rank": "スコアが高い順", "sort.div": "配当利回りが高い順", "sort.per": "PERが低い順",
+      "sort.roe": "ROEが高い順", "sort.growth": "売上成長率が高い順",
+      "source": "出典", "all": "すべて", "search": "銘柄名・コードで探す", "search.ph": "例: 7203、Toyota",
+      "count": "{n}銘柄中 {m}銘柄を表示", "none": "条件に合う銘柄がありません。出典や検索語を変えてください。",
+      "legend": "判定の記号: ◎ 目安では好ましいとされる側　○ 標準的　△ 注意が必要とされる側　− 判定なし",
+      "excluded": "絞り込み条件で除外: ",
+      "rank.aria": "{r}位", "score": "スコア", "score.aria": "スコア {s}点", "src.prefix": "出典: ",
+      "good": "強み", "warn": "注意", "price": "株価", "sep": "、", "list.sep": " / ",
+      "ai.lead": "作成: {t}　条件: {c}。AIが挙げた「調べる候補」で、理由には誤りや古い情報が含まれる可能性があります。",
+      "ai.match": "一致", "ai.both": "両方のAIが挙げた銘柄: ", "ai.of": "{l}の候補",
+      "ai.in": "候補ランキング {r}位・スコア {s}", "ai.out": "候補ランキング外（条件外または取得できず）",
+      "ai.reason": "理由", "ai.risk": "注意", "ai.notes": "補足",
+      "com.lead": "作成: {t}。候補ランキング上位の銘柄について、Claude が数値をもとに書いた解説です。",
+      "guide.title": "指標の一般的な目安",
+      "guide.lead": "投資の入門書や証券会社の解説でよく使われる目安です。公式の基準ではなく、業種や時期によって適切な水準は変わります。同じ業種の会社どうしで比べるのが基本です。",
+      "guide.bm": "目安: ",
+      "disclaimer": "このページは、PCのアプリ「銘柄えらび帳」で集計した結果を公開したものです。特定の銘柄の売買を勧めるものではありません。株価・指標は Yahoo!ファイナンスから取得した値で、欠けや遅れがあり得ます。AIの候補と解説は Claude と ChatGPT が作成したもので、誤りや古い情報を含む可能性があります。投資の判断は、企業の決算資料や証券会社の画面で最新の値を確認したうえで、ご自身で行ってください。",
+      "ver": "銘柄えらび帳 v{v}", "logo": "5garashi.com設計事務所", "logo.file": "5garashi_logotype_outlined.svg"
+    },
+    en: {
+      "skip": "Skip to content",
+      "updated": "Updated: {t} JST (aggregated on a PC)",
+      "nav.label": "Jump to section", "nav.ranking": "Candidate ranking", "nav.ai": "AI suggestions",
+      "nav.comment": "Claude's commentary", "nav.guide": "Benchmarks",
+      "rank.lead": "The score compares the stocks in this list with each other (0–100). “Strengths”, “Cautions” and the per-metric judgments compare each value with common benchmarks.",
+      "pol.preset": "Policy", "pol.weights": "Weights", "pol.filters": "Filters", "pol.none": "none", "pol.range": " (0–5)",
+      "sort": "Sort by", "sort.rank": "Score, high to low", "sort.div": "Dividend yield, high to low", "sort.per": "PER, low to high",
+      "sort.roe": "ROE, high to low", "sort.growth": "Revenue growth, high to low",
+      "source": "Source", "all": "All", "search": "Search by name or code", "search.ph": "e.g. 7203, Toyota",
+      "count": "Showing {m} of {n} stocks", "none": "No stocks match. Change the source or search term.",
+      "legend": "Symbols: ◎ favorable side of the benchmark   ○ standard   △ cautionary side   − not judged",
+      "excluded": "Excluded by filters: ",
+      "rank.aria": "Rank {r}", "score": "Score", "score.aria": "Score {s}", "src.prefix": "Source: ",
+      "good": "Strengths", "warn": "Cautions", "price": "Price", "sep": ", ", "list.sep": " / ",
+      "ai.lead": "Created: {t}. Conditions: {c}. These are stocks the AI suggests researching; the reasons may contain errors or outdated information.",
+      "ai.match": "Match", "ai.both": "Suggested by both AIs: ", "ai.of": "{l}'s suggestions",
+      "ai.in": "Ranking #{r}, score {s}", "ai.out": "Not in the ranking (filtered out or not found)",
+      "ai.reason": "Reason", "ai.risk": "Caution", "ai.notes": "Notes",
+      "com.lead": "Created: {t}. Commentary written by Claude on the top-ranked stocks, based on the figures.",
+      "guide.title": "Common benchmarks",
+      "guide.lead": "Rules of thumb often used in beginner investment books and broker guides. They are not official standards, and the right level varies by industry and period. Compare companies within the same industry.",
+      "guide.bm": "Benchmark: ",
+      "disclaimer": "This page publishes results aggregated with the PC app “Stock Picks Notebook”. It does not recommend buying or selling any stock. Prices and metrics come from Yahoo! Finance and may be missing or delayed. AI suggestions and commentary were written by Claude and ChatGPT and may contain errors or outdated information. Check the latest figures in company filings or with your broker, and make your own investment decisions.",
+      "ver": "Stock Picks Notebook v{v}", "logo": "5garashi.com Design Office", "logo.file": "5garashi_logotype_en_outlined.svg"
+    }
+  };
+
+  // 表示言語: 前回選んだ言語 → ブラウザの言語 の順に決める（保存できない環境でも動く）
+  var lang = null;
+  try { lang = localStorage.getItem("meigara-lang"); } catch (e) {}
+  if (lang !== "ja" && lang !== "en") lang = /^ja/i.test(navigator.language || "") ? "ja" : "en";
+
+  function u(key, vars) {
+    var s = (UI[lang] && UI[lang][key]) || UI.ja[key] || "";
+    if (vars) for (var k in vars) s = s.split("{" + k + "}").join(vars[k]);
+    return s;
+  }
+  function tr(obj) { return obj == null ? "" : (typeof obj === "string" ? obj : (obj[lang] != null ? obj[lang] : obj.ja)); }
+  function el(tag, attrs, kids) {
+    var n = document.createElement(tag);
+    if (attrs) for (var a in attrs) {
+      if (a === "text") n.textContent = attrs[a];
+      else if (a === "cls") n.className = attrs[a];
+      else n.setAttribute(a, attrs[a]);
+    }
+    (kids || []).forEach(function (k) { if (k) n.appendChild(typeof k === "string" ? document.createTextNode(k) : k); });
+    return n;
+  }
+  function fmt(k, v) {
+    if (v === null || v === undefined) return "−";
+    var d = (k === "pbr" || k === "div") ? 2 : 1;
+    return v.toLocaleString(lang === "en" ? "en-US" : "ja-JP", { minimumFractionDigits: d, maximumFractionDigits: d }) + tr(D.metrics[k].unit);
+  }
+
+  var state = { sort: "rank", src: "all", q: "" };
+  var hasAI = D.ai && Object.keys(D.ai).length > 0;
+
+  // ---- 静的な文言と見出し
+  function renderStatic() {
+    document.documentElement.lang = lang;
+    document.title = tr(D.titles);
+    document.getElementById("title").textContent = tr(D.titles);
+    document.getElementById("updated").textContent = u("updated", { t: D.generated_at });
+    var logo = document.getElementById("logo");
+    logo.src = "assets/" + u("logo.file"); logo.alt = u("logo");
+    document.getElementById("ver").textContent = u("ver", { v: D.app_version });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-i]"), function (n) { n.textContent = u(n.getAttribute("data-i")); });
+    Array.prototype.forEach.call(document.querySelectorAll("#langs button"), function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    });
+    document.getElementById("q").placeholder = u("search.ph");
+
+    var jump = document.getElementById("jump");
+    jump.setAttribute("aria-label", u("nav.label"));
+    jump.textContent = "";
+    var jumps = [["#ranking", "nav.ranking"]];
+    if (hasAI) jumps.push(["#ai", "nav.ai"]);
+    if (D.commentary) jumps.push(["#commentary", "nav.comment"]);
+    jumps.push(["#guide", "nav.guide"]);
+    jumps.forEach(function (j) { jump.appendChild(el("a", { href: j[0], text: u(j[1]) })); });
+
+    // 方針
+    var pol = document.getElementById("policy"); pol.textContent = "";
+    var dl = el("dl");
+    function row(tk, d) { dl.appendChild(el("dt", { text: u(tk) })); dl.appendChild(el("dd", { text: d })); }
+    row("pol.preset", tr(D.policy.preset) || "−");
+    row("pol.weights", D.policy.weights.map(function (w) { return tr(D.metrics[w.key].label) + " " + w.weight; }).join(u("sep")) + u("pol.range"));
+    var f = tr(D.policy.filters) || [];
+    row("pol.filters", f.length ? f.join(u("sep")) : u("pol.none"));
+    pol.appendChild(dl);
+
+    // 並べ替え
+    var sel = document.getElementById("sort"); sel.textContent = "";
+    ["rank", "div", "per", "roe", "growth"].forEach(function (v) {
+      if (v !== "rank" && !D.show_numbers) return;
+      var o = el("option", { value: v, text: u("sort." + v) }); if (v === state.sort) o.selected = true; sel.appendChild(o);
+    });
+
+    // 出典
+    var seg = document.getElementById("srcs"); seg.textContent = "";
+    var ids = ["all"];
+    D.stocks.forEach(function (s) { s.source.forEach(function (x) { if (ids.indexOf(x) < 0) ids.push(x); }); });
+    ids.forEach(function (id) {
+      var b = el("button", { type: "button", "aria-pressed": String(id === state.src), text: id === "all" ? u("all") : tr(D.sources[id]) });
+      b.addEventListener("click", function () {
+        state.src = id;
+        Array.prototype.forEach.call(seg.children, function (c) { c.setAttribute("aria-pressed", String(c === b)); });
+        renderList();
+      });
+      seg.appendChild(b);
+    });
+
+    document.getElementById("excluded").textContent = D.excluded.length ? u("excluded") +
+      D.excluded.map(function (e) { return e.name + "（" + e.code + "）"; }).join(u("sep")) : "";
+  }
+
+  // ---- 銘柄カード
+  function card(s) {
+    var top = el("div", { cls: "top" }, [
+      el("span", { cls: "rank", "aria-label": u("rank.aria", { r: s.rank }), text: String(s.rank) }),
+      el("div", null, [
+        el("h3", { cls: "name", text: s.name }),
+        el("p", { cls: "sub", text: [s.code, s.sector, s.source.length ? u("src.prefix") + s.source.map(function (x) { return tr(D.sources[x]); }).join(u("sep")) : ""].filter(Boolean).join(u("list.sep")) })
+      ]),
+      el("div", { cls: "score", "aria-label": u("score.aria", { s: s.score }) }, [String(s.score), el("small", { text: u("score") })]),
+      (function () { var m = el("div", { cls: "meter", "aria-hidden": "true" }); var i = el("i"); i.style.width = s.score + "%"; m.appendChild(i); return m; })()
+    ]);
+    var tags = el("div", { cls: "tags" });
+    var gd = tr(s.good) || [], wn = tr(s.warn) || [];
+    if (gd.length) tags.appendChild(el("p", null, [el("span", { cls: "tl good", text: u("good") }), gd.join(u("sep"))]));
+    if (wn.length) tags.appendChild(el("p", null, [el("span", { cls: "tl warn", text: u("warn") }), wn.join(u("sep"))]));
+    var dl = el("dl", { cls: "metrics" });
+    K.forEach(function (k) {
+      var m = s.metrics[k];
+      var dd = el("dd");
+      if (D.show_numbers) dd.appendChild(el("span", { cls: "val", text: fmt(k, m.value) }));
+      dd.appendChild(el("span", { cls: "jd " + m.kind }, [el("span", { "aria-hidden": "true", text: MARK[m.kind] + " " }), tr(m.judge)]));
+      dl.appendChild(el("div", null, [el("dt", { text: tr(D.metrics[k].label) }), dd]));
+    });
+    var extra = null;
+    if (D.show_numbers && s.price !== null) extra = el("p", { cls: "sub", text: u("price") + " " + s.price.toLocaleString(lang === "en" ? "en-US" : "ja-JP") + " " + s.currency });
+    return el("li", null, [el("article", { cls: "stock", "aria-label": u("rank.aria", { r: s.rank }) + " " + s.name }, [top, extra, tags.children.length ? tags : null, dl])]);
+  }
+  function val(s, k) { var v = s.metrics[k].value; return v === null ? null : v; }
+  function renderList() {
+    var list = D.stocks.filter(function (s) {
+      if (state.src !== "all" && s.source.indexOf(state.src) < 0) return false;
+      if (state.q && (s.name + " " + s.code).toLowerCase().indexOf(state.q) < 0) return false;
+      return true;
+    }).slice();
+    var dir = { div: -1, per: 1, roe: -1, growth: -1 }[state.sort];
+    if (dir) list.sort(function (a, b) {
+      var x = val(a, state.sort), y = val(b, state.sort);
+      if (state.sort === "per") { if (x !== null && x <= 0) x = null; if (y !== null && y <= 0) y = null; }
+      if (x === null) return 1; if (y === null) return -1;
+      return (x - y) * dir;
+    });
+    var ol = document.getElementById("stocks");
+    ol.textContent = "";
+    if (!list.length) ol.appendChild(el("li", { cls: "empty", text: u("none") }));
+    list.forEach(function (s) { ol.appendChild(card(s)); });
+    document.getElementById("count").textContent = u("count", { n: D.stocks.length, m: list.length });
+  }
+
+  // ---- AI候補
+  function renderAI() {
+    if (!hasAI) return;
+    document.getElementById("ai").hidden = false;
+    var c = D.ai_conditions || {};
+    var cond = [tr(c.market), tr(c.preset)].filter(Boolean).join(" / ") + (c.extra ? " / " + u("ai.notes") + ": " + c.extra : "");
+    document.getElementById("ai-lead").textContent = u("ai.lead", { t: D.ai_generated_at || "−", c: cond || "−" });
+    var seen = {}, both = [];
+    Object.keys(D.ai).forEach(function (src) {
+      (D.ai[src].picks || []).forEach(function (p) { seen[p.code] = (seen[p.code] || 0) + 1; if (seen[p.code] === 2) both.push(p); });
+    });
+    var bothBox = document.getElementById("ai-both"); bothBox.textContent = "";
+    if (both.length) bothBox.appendChild(el("p", { cls: "both" }, [
+      el("span", { cls: "tl good", text: u("ai.match") }),
+      u("ai.both") + both.map(function (p) { return tr(p.name) + "（" + p.code + "）"; }).join(u("sep"))
+    ]));
+    var grid = document.getElementById("ai-grid"); grid.textContent = "";
+    Object.keys(D.ai).forEach(function (src) {
+      var a = D.ai[src];
+      var col = el("div", { cls: "ai-col" }, [el("h3", { text: u("ai.of", { l: a.label }) })]);
+      if (a.error) { col.appendChild(el("p", { cls: "empty", text: tr(a.error) })); grid.appendChild(col); return; }
+      var ol = el("ol", { cls: "picks" });
+      a.picks.forEach(function (p) {
+        var risk = tr(p.risk);
+        ol.appendChild(el("li", null, [
+          el("div", { cls: "pn", text: tr(p.name) }),
+          el("p", { cls: "pm", text: p.code + u("list.sep") + (p.rank ? u("ai.in", { r: p.rank, s: p.score }) : u("ai.out")) }),
+          el("p", null, [el("span", { cls: "tl good", text: u("ai.reason") }), tr(p.reason)]),
+          risk ? el("p", null, [el("span", { cls: "tl warn", text: u("ai.risk") }), risk]) : null
+        ]));
+      });
+      col.appendChild(ol);
+      grid.appendChild(col);
+    });
+  }
+
+  // ---- 解説
+  function renderCommentary() {
+    if (!D.commentary) return;
+    document.getElementById("commentary").hidden = false;
+    document.getElementById("com-lead").textContent = u("com.lead", { t: D.commentary.generated_at || "−" });
+    var box = document.getElementById("com-text");
+    box.setAttribute("lang", lang);
+    box.textContent = tr(D.commentary.text).replace(/\*\*/g, "").replace(/^#{1,6}\s*/gm, "");
+  }
+
+  // ---- 目安
+  function renderGuide() {
+    var gb = document.getElementById("guide-body"); gb.textContent = "";
+    K.forEach(function (k) {
+      var m = D.metrics[k];
+      gb.appendChild(el("li", null, [
+        el("h3", { text: tr(m.name) }),
+        el("p", { cls: "bm", text: u("guide.bm") + tr(m.benchmark) }),
+        el("p", { cls: "ex", text: tr(m.short) })
+      ]));
+    });
+  }
+
+  function renderAll() { renderStatic(); renderList(); renderAI(); renderCommentary(); renderGuide(); }
+
+  document.getElementById("sort").addEventListener("change", function (e) { state.sort = e.target.value; renderList(); });
+  document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); renderList(); });
+  Array.prototype.forEach.call(document.querySelectorAll("#langs button"), function (b) {
+    b.addEventListener("click", function () {
+      lang = b.getAttribute("data-lang");
+      try { localStorage.setItem("meigara-lang", lang); } catch (e) {}
+      renderAll();
+      b.focus();
+    });
+  });
+  renderAll();
+})();
+</script>
+</body>
+</html>
