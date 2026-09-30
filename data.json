@@ -1,7 +1,7 @@
 {
  "version": 2,
  "app_version": "1.6.0",
- "generated_at": "2026-09-28 07:48",
+ "generated_at": "2026-09-30 10:26",
  "show_numbers": true,
  "policy": {
   "preset": {
@@ -190,14 +190,173 @@
  "stocks": [
   {
    "rank": 1,
+   "code": "1925.T",
+   "name": "Daiwa House Industry Co., Ltd.",
+   "sector": "Real Estate - Development",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 70,
+   "price": 2178.5,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "PER割安",
+     "PBR1倍割れ",
+     "高配当",
+     "高ROE"
+    ],
+    "en": [
+     "Low PER",
+     "PBR below 1x",
+     "High yield",
+     "High ROE"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 3.8462,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 0.4637,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 4.2231,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準（減配リスクも確認）",
+      "en": "High (check dividend-cut risk)"
+     }
+    },
+    "roe": {
+     "value": 12.881,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 9.0,
+     "kind": "mid",
+     "judge": {
+      "ja": "安定成長",
+      "en": "Steady growth"
+     }
+    },
+    "equity": {
+     "value": 34.4341,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 2,
+   "code": "8766.T",
+   "name": "Tokio Marine Holdings, Inc.",
+   "sector": "Insurance - Property & Casualty",
+   "source": [
+    "claude",
+    "chatgpt"
+   ],
+   "score": 68,
+   "price": 528.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "PER割安",
+     "PBR1倍割れ",
+     "高配当"
+    ],
+    "en": [
+     "Low PER",
+     "PBR below 1x",
+     "High yield"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 1.8916,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 0.1224,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 24.7481,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準（減配リスクも確認）",
+      "en": "High (check dividend-cut risk)"
+     }
+    },
+    "roe": {
+     "value": null,
+     "kind": "na",
+     "judge": {
+      "ja": "データなし",
+      "en": "No data"
+     }
+    },
+    "growth": {
+     "value": 0.1,
+     "kind": "mid",
+     "judge": {
+      "ja": "低成長",
+      "en": "Low growth"
+     }
+    },
+    "equity": {
+     "value": 24.1058,
+     "kind": "na",
+     "judge": {
+      "ja": "金融業のため目安の対象外",
+      "en": "Financials: benchmark not applicable"
+     }
+    }
+   }
+  },
+  {
+   "rank": 3,
    "code": "7203.T",
    "name": "Toyota Motor Corporation",
    "sector": "Auto Manufacturers",
    "source": [
     "watch"
    ],
-   "score": 69,
-   "price": 2989.5,
+   "score": 66,
+   "price": 2880.5,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -221,7 +380,7 @@
    },
    "metrics": {
     "per": {
-     "value": 8.5105,
+     "value": 8.2007,
      "kind": "good",
      "judge": {
       "ja": "割安とされる水準",
@@ -229,7 +388,7 @@
      }
     },
     "pbr": {
-     "value": 0.9489,
+     "value": 0.9143,
      "kind": "good",
      "judge": {
       "ja": "1倍割れ（解散価値を下回る）",
@@ -237,7 +396,7 @@
      }
     },
     "div": {
-     "value": 3.345,
+     "value": 3.4716,
      "kind": "good",
      "judge": {
       "ja": "高配当とされる水準",
@@ -271,15 +430,15 @@
    }
   },
   {
-   "rank": 2,
+   "rank": 4,
    "code": "8591.T",
    "name": "ORIX Corporation",
    "sector": "Financial Conglomerates",
    "source": [
     "watch"
    ],
-   "score": 67,
-   "price": 6171.0,
+   "score": 62,
+   "price": 5902.0,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -297,7 +456,7 @@
    },
    "metrics": {
     "per": {
-     "value": 10.9648,
+     "value": 10.4842,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -305,7 +464,7 @@
      }
     },
     "pbr": {
-     "value": 1.4349,
+     "value": 1.3723,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -313,7 +472,7 @@
      }
     },
     "div": {
-     "value": 2.7485,
+     "value": 2.8738,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -347,102 +506,15 @@
    }
   },
   {
-   "rank": 3,
-   "code": "2914.T",
-   "name": "Japan Tobacco Inc.",
-   "sector": "Tobacco",
-   "source": [
-    "watch"
-   ],
-   "score": 67,
-   "price": 6943.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高配当",
-     "高ROE",
-     "高成長",
-     "財務安定"
-    ],
-    "en": [
-     "High yield",
-     "High ROE",
-     "High growth",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 20.7037,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 2.8054,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 3.9176,
-     "kind": "good",
-     "judge": {
-      "ja": "高配当とされる水準",
-      "en": "Considered high yield"
-     }
-    },
-    "roe": {
-     "value": 14.298,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 17.0,
-     "kind": "good",
-     "judge": {
-      "ja": "高成長とされる水準",
-      "en": "Considered high growth"
-     }
-    },
-    "equity": {
-     "value": 48.5428,
-     "kind": "good",
-     "judge": {
-      "ja": "安定とされる水準",
-      "en": "Considered stable"
-     }
-    }
-   }
-  },
-  {
-   "rank": 4,
+   "rank": 5,
    "code": "1928.T",
    "name": "Sekisui House, Ltd.",
    "sector": "Residential Construction",
    "source": [
-    "claude",
-    "chatgpt"
+    "claude"
    ],
-   "score": 64,
-   "price": 3369.0,
+   "score": 60,
+   "price": 3327.0,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -470,7 +542,7 @@
    },
    "metrics": {
     "per": {
-     "value": 8.5471,
+     "value": 8.4429,
      "kind": "good",
      "judge": {
       "ja": "割安とされる水準",
@@ -478,7 +550,7 @@
      }
     },
     "pbr": {
-     "value": 0.9711,
+     "value": 0.959,
      "kind": "good",
      "judge": {
       "ja": "1倍割れ（解散価値を下回る）",
@@ -486,7 +558,7 @@
      }
     },
     "div": {
-     "value": 4.3336,
+     "value": 4.3883,
      "kind": "good",
      "judge": {
       "ja": "高い水準（減配リスクも確認）",
@@ -520,92 +592,15 @@
    }
   },
   {
-   "rank": 5,
-   "code": "1808.T",
-   "name": "HASEKO Corporation",
-   "sector": "Residential Construction",
+   "rank": 6,
+   "code": "2914.T",
+   "name": "Japan Tobacco Inc.",
+   "sector": "Tobacco",
    "source": [
     "claude"
    ],
-   "score": 63,
-   "price": 2731.5,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高配当",
-     "高ROE"
-    ],
-    "en": [
-     "High yield",
-     "High ROE"
-    ]
-   },
-   "warn": {
-    "ja": [],
-    "en": []
-   },
-   "metrics": {
-    "per": {
-     "value": 13.3511,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "pbr": {
-     "value": 1.2695,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "div": {
-     "value": 3.661,
-     "kind": "good",
-     "judge": {
-      "ja": "高配当とされる水準",
-      "en": "Considered high yield"
-     }
-    },
-    "roe": {
-     "value": 11.588,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 9.2,
-     "kind": "mid",
-     "judge": {
-      "ja": "安定成長",
-      "en": "Steady growth"
-     }
-    },
-    "equity": {
-     "value": 39.6928,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    }
-   }
-  },
-  {
-   "rank": 6,
-   "code": "5108.T",
-   "name": "Bridgestone Corporation",
-   "sector": "Auto Parts",
-   "source": [
-    "claude",
-    "chatgpt"
-   ],
-   "score": 62,
-   "price": 3839.0,
+   "score": 59,
+   "price": 6885.0,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -622,28 +617,34 @@
     ]
    },
    "warn": {
-    "ja": [],
-    "en": []
+    "ja": [
+     "PER割高",
+     "PBR割高"
+    ],
+    "en": [
+     "High PER",
+     "High PBR"
+    ]
    },
    "metrics": {
     "per": {
-     "value": 19.4557,
-     "kind": "mid",
+     "value": 20.4917,
+     "kind": "warn",
      "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
      }
     },
     "pbr": {
-     "value": 1.2636,
-     "kind": "mid",
+     "value": 2.782,
+     "kind": "warn",
      "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
      }
     },
     "div": {
-     "value": 3.3863,
+     "value": 3.9506,
      "kind": "good",
      "judge": {
       "ja": "高配当とされる水準",
@@ -651,7 +652,7 @@
      }
     },
     "roe": {
-     "value": 11.267,
+     "value": 14.298,
      "kind": "good",
      "judge": {
       "ja": "高い水準",
@@ -659,7 +660,7 @@
      }
     },
     "growth": {
-     "value": 14.2,
+     "value": 17.0,
      "kind": "good",
      "judge": {
       "ja": "高成長とされる水準",
@@ -667,25 +668,99 @@
      }
     },
     "equity": {
-     "value": 63.7088,
+     "value": 48.5428,
      "kind": "good",
      "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
+      "ja": "安定とされる水準",
+      "en": "Considered stable"
      }
     }
    }
   },
   {
    "rank": 7,
+   "code": "2503.T",
+   "name": "Kirin Holdings Company, Limited",
+   "sector": "Beverages - Brewers",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 58,
+   "price": 2813.5,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高ROE"
+    ],
+    "en": [
+     "High ROE"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 11.571,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.6462,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 2.7013,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 15.143,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 9.2,
+     "kind": "mid",
+     "judge": {
+      "ja": "安定成長",
+      "en": "Steady growth"
+     }
+    },
+    "equity": {
+     "value": 36.8339,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    }
+   }
+  },
+  {
+   "rank": 8,
    "code": "GOOGL",
    "name": "Alphabet Inc.",
    "sector": "Internet Content & Information",
    "source": [
     "watch"
    ],
-   "score": 59,
-   "price": 343.92,
+   "score": 57,
+   "price": 340.92,
    "currency": "USD",
    "good": {
     "ja": [
@@ -709,7 +784,7 @@
    },
    "metrics": {
     "per": {
-     "value": 17.2737,
+     "value": 17.1231,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -717,7 +792,7 @@
      }
     },
     "pbr": {
-     "value": 6.7573,
+     "value": 6.6984,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -725,7 +800,7 @@
      }
     },
     "div": {
-     "value": 0.2559,
+     "value": 0.2581,
      "kind": "mid",
      "judge": {
       "ja": "低めの水準",
@@ -759,15 +834,335 @@
    }
   },
   {
-   "rank": 8,
+   "rank": 9,
+   "code": "5108.T",
+   "name": "Bridgestone Corporation",
+   "sector": "Auto Parts",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 56,
+   "price": 3822.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高配当",
+     "高ROE",
+     "高成長",
+     "財務安定"
+    ],
+    "en": [
+     "High yield",
+     "High ROE",
+     "High growth",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 19.3656,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.258,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 3.4014,
+     "kind": "good",
+     "judge": {
+      "ja": "高配当とされる水準",
+      "en": "Considered high yield"
+     }
+    },
+    "roe": {
+     "value": 11.267,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 14.2,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 63.7088,
+     "kind": "good",
+     "judge": {
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
+     }
+    }
+   }
+  },
+  {
+   "rank": 10,
+   "code": "8316.T",
+   "name": "Sumitomo Mitsui Financial Group, Inc.",
+   "sector": "Banks - Diversified",
+   "source": [
+    "claude"
+   ],
+   "score": 54,
+   "price": 3386.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "PER割安",
+     "PBR1倍割れ",
+     "急成長"
+    ],
+    "en": [
+     "Low PER",
+     "PBR below 1x",
+     "Rapid growth"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 7.5872,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 0.7988,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 2.658,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 8.569,
+     "kind": "mid",
+     "judge": {
+      "ja": "目安の8%を満たす",
+      "en": "Meets the 8% benchmark"
+     }
+    },
+    "growth": {
+     "value": 24.8,
+     "kind": "good",
+     "judge": {
+      "ja": "急成長とされる水準",
+      "en": "Considered rapid growth"
+     }
+    },
+    "equity": {
+     "value": 4.8053,
+     "kind": "na",
+     "judge": {
+      "ja": "金融業のため目安の対象外",
+      "en": "Financials: benchmark not applicable"
+     }
+    }
+   }
+  },
+  {
+   "rank": 11,
+   "code": "4519.T",
+   "name": "Chugai Pharmaceutical Co., Ltd.",
+   "sector": "Drug Manufacturers - General",
+   "source": [
+    "claude"
+   ],
+   "score": 54,
+   "price": 6090.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高ROE",
+     "高成長",
+     "財務安定"
+    ],
+    "en": [
+     "High ROE",
+     "High growth",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [
+     "PER割高",
+     "PBR割高"
+    ],
+    "en": [
+     "High PER",
+     "High PBR"
+    ]
+   },
+   "metrics": {
+    "per": {
+     "value": 21.2721,
+     "kind": "warn",
+     "judge": {
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
+     }
+    },
+    "pbr": {
+     "value": 4.9416,
+     "kind": "warn",
+     "judge": {
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
+     }
+    },
+    "div": {
+     "value": 2.1675,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 23.493,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 17.8,
+     "kind": "good",
+     "judge": {
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
+     }
+    },
+    "equity": {
+     "value": 82.0601,
+     "kind": "good",
+     "judge": {
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
+     }
+    }
+   }
+  },
+  {
+   "rank": 12,
+   "code": "7751.T",
+   "name": "Canon Inc.",
+   "sector": "Computer Hardware",
+   "source": [
+    "chatgpt"
+   ],
+   "score": 53,
+   "price": 4596.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高配当",
+     "高ROE",
+     "財務安定"
+    ],
+    "en": [
+     "High yield",
+     "High ROE",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 11.6237,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.1205,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 3.4813,
+     "kind": "good",
+     "judge": {
+      "ja": "高配当とされる水準",
+      "en": "Considered high yield"
+     }
+    },
+    "roe": {
+     "value": 10.371,
+     "kind": "good",
+     "judge": {
+      "ja": "高い水準",
+      "en": "High"
+     }
+    },
+    "growth": {
+     "value": 3.6,
+     "kind": "mid",
+     "judge": {
+      "ja": "低成長",
+      "en": "Low growth"
+     }
+    },
+    "equity": {
+     "value": 56.9158,
+     "kind": "good",
+     "judge": {
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
+     }
+    }
+   }
+  },
+  {
+   "rank": 13,
    "code": "9432.T",
    "name": "NTT, Inc.",
    "sector": "Telecom Services",
    "source": [
-    "watch"
+    "chatgpt"
    ],
-   "score": 55,
-   "price": 176.1,
+   "score": 49,
+   "price": 169.7,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -787,7 +1182,7 @@
    },
    "metrics": {
     "per": {
-     "value": 13.9651,
+     "value": 13.4576,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -795,7 +1190,7 @@
      }
     },
     "pbr": {
-     "value": 1.4545,
+     "value": 1.4017,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -803,7 +1198,7 @@
      }
     },
     "div": {
-     "value": 3.0664,
+     "value": 3.1821,
      "kind": "good",
      "judge": {
       "ja": "高配当とされる水準",
@@ -837,412 +1232,15 @@
    }
   },
   {
-   "rank": 9,
-   "code": "6301.T",
-   "name": "Komatsu Ltd.",
-   "sector": "Farm & Heavy Construction Machinery",
-   "source": [
-    "claude",
-    "chatgpt"
-   ],
-   "score": 55,
-   "price": 7640.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高ROE",
-     "高成長",
-     "財務安定"
-    ],
-    "en": [
-     "High ROE",
-     "High growth",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [],
-    "en": []
-   },
-   "metrics": {
-    "per": {
-     "value": 18.4501,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "pbr": {
-     "value": 1.9375,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "div": {
-     "value": 2.4869,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "roe": {
-     "value": 11.619,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 14.7,
-     "kind": "good",
-     "judge": {
-      "ja": "高成長とされる水準",
-      "en": "Considered high growth"
-     }
-    },
-    "equity": {
-     "value": 54.6513,
-     "kind": "good",
-     "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
-     }
-    }
-   }
-  },
-  {
-   "rank": 10,
-   "code": "1333.T",
-   "name": "Umios Corporation",
-   "sector": "Packaged Foods",
-   "source": [
-    "claude"
-   ],
-   "score": 55,
-   "price": 1291.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "PER割安",
-     "PBR1倍割れ",
-     "高配当"
-    ],
-    "en": [
-     "Low PER",
-     "PBR below 1x",
-     "High yield"
-    ]
-   },
-   "warn": {
-    "ja": [],
-    "en": []
-   },
-   "metrics": {
-    "per": {
-     "value": 8.7949,
-     "kind": "good",
-     "judge": {
-      "ja": "割安とされる水準",
-      "en": "Considered cheap"
-     }
-    },
-    "pbr": {
-     "value": 0.7873,
-     "kind": "good",
-     "judge": {
-      "ja": "1倍割れ（解散価値を下回る）",
-      "en": "Below 1x (under liquidation value)"
-     }
-    },
-    "div": {
-     "value": 3.4857,
-     "kind": "good",
-     "judge": {
-      "ja": "高配当とされる水準",
-      "en": "Considered high yield"
-     }
-    },
-    "roe": {
-     "value": 8.652,
-     "kind": "mid",
-     "judge": {
-      "ja": "目安の8%を満たす",
-      "en": "Meets the 8% benchmark"
-     }
-    },
-    "growth": {
-     "value": 5.3,
-     "kind": "mid",
-     "judge": {
-      "ja": "安定成長",
-      "en": "Steady growth"
-     }
-    },
-    "equity": {
-     "value": 32.8902,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    }
-   }
-  },
-  {
-   "rank": 11,
-   "code": "8035.T",
-   "name": "Tokyo Electron Limited",
-   "sector": "Semiconductor Equipment & Materials",
-   "source": [
-    "watch"
-   ],
-   "score": 55,
-   "price": 56520.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高ROE",
-     "急成長",
-     "財務安定"
-    ],
-    "en": [
-     "High ROE",
-     "Rapid growth",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 45.2489,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 11.9916,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 1.3234,
-     "kind": "mid",
-     "judge": {
-      "ja": "低めの水準",
-      "en": "Lowish"
-     }
-    },
-    "roe": {
-     "value": 30.929,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 33.3,
-     "kind": "good",
-     "judge": {
-      "ja": "急成長とされる水準",
-      "en": "Considered rapid growth"
-     }
-    },
-    "equity": {
-     "value": 72.3522,
-     "kind": "good",
-     "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
-     }
-    }
-   }
-  },
-  {
-   "rank": 12,
-   "code": "8306.T",
-   "name": "Mitsubishi UFJ Financial Group, Inc.",
-   "sector": "Banks - Diversified",
-   "source": [
-    "watch"
-   ],
-   "score": 54,
-   "price": 3714.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "急成長"
-    ],
-    "en": [
-     "Rapid growth"
-    ]
-   },
-   "warn": {
-    "ja": [],
-    "en": []
-   },
-   "metrics": {
-    "per": {
-     "value": 15.6987,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "pbr": {
-     "value": 1.8416,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "div": {
-     "value": 2.5848,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "roe": {
-     "value": 9.459,
-     "kind": "mid",
-     "judge": {
-      "ja": "目安の8%を満たす",
-      "en": "Meets the 8% benchmark"
-     }
-    },
-    "growth": {
-     "value": 28.8,
-     "kind": "good",
-     "judge": {
-      "ja": "急成長とされる水準",
-      "en": "Considered rapid growth"
-     }
-    },
-    "equity": {
-     "value": 5.1592,
-     "kind": "na",
-     "judge": {
-      "ja": "金融業のため目安の対象外",
-      "en": "Financials: benchmark not applicable"
-     }
-    }
-   }
-  },
-  {
-   "rank": 13,
-   "code": "4768.T",
-   "name": "Otsuka Corporation",
-   "sector": "Information Technology Services",
-   "source": [
-    "chatgpt"
-   ],
-   "score": 54,
-   "price": 3662.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高ROE",
-     "財務安定"
-    ],
-    "en": [
-     "High ROE",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 20.7467,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 3.3558,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 2.8673,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "roe": {
-     "value": 16.991,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 8.7,
-     "kind": "mid",
-     "judge": {
-      "ja": "安定成長",
-      "en": "Steady growth"
-     }
-    },
-    "equity": {
-     "value": 54.076,
-     "kind": "good",
-     "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
-     }
-    }
-   }
-  },
-  {
    "rank": 14,
    "code": "9433.T",
    "name": "KDDI Corporation",
    "sector": "Telecom Services",
    "source": [
-    "watch"
+    "claude"
    ],
-   "score": 52,
-   "price": 3039.0,
+   "score": 48,
+   "price": 2918.5,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -1262,7 +1260,7 @@
    },
    "metrics": {
     "per": {
-     "value": 16.5451,
+     "value": 15.889,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -1270,7 +1268,7 @@
      }
     },
     "pbr": {
-     "value": 2.2567,
+     "value": 2.1673,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -1278,7 +1276,7 @@
      }
     },
     "div": {
-     "value": 2.7641,
+     "value": 2.8782,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -1313,35 +1311,119 @@
   },
   {
    "rank": 15,
-   "code": "8001.T",
-   "name": "ITOCHU Corporation",
-   "sector": "Conglomerates",
+   "code": "1605.T",
+   "name": "Inpex Corporation",
+   "sector": "Oil & Gas E&P",
    "source": [
-    "claude",
     "chatgpt"
    ],
-   "score": 50,
-   "price": 2211.0,
+   "score": 48,
+   "price": 3683.0,
    "currency": "JPY",
    "good": {
     "ja": [
-     "高ROE"
+     "PER割安",
+     "PBR1倍割れ",
+     "高配当",
+     "財務安定"
     ],
     "en": [
-     "High ROE"
+     "Low PER",
+     "PBR below 1x",
+     "High yield",
+     "Stable finances"
     ]
    },
    "warn": {
     "ja": [
-     "PBR割高"
+     "減収"
     ],
     "en": [
-     "High PBR"
+     "Revenue decline"
     ]
    },
    "metrics": {
     "per": {
-     "value": 17.2707,
+     "value": 9.953,
+     "kind": "good",
+     "judge": {
+      "ja": "割安とされる水準",
+      "en": "Considered cheap"
+     }
+    },
+    "pbr": {
+     "value": 0.8389,
+     "kind": "good",
+     "judge": {
+      "ja": "1倍割れ（解散価値を下回る）",
+      "en": "Below 1x (under liquidation value)"
+     }
+    },
+    "div": {
+     "value": 3.041,
+     "kind": "good",
+     "judge": {
+      "ja": "高配当とされる水準",
+      "en": "Considered high yield"
+     }
+    },
+    "roe": {
+     "value": 9.271,
+     "kind": "mid",
+     "judge": {
+      "ja": "目安の8%を満たす",
+      "en": "Meets the 8% benchmark"
+     }
+    },
+    "growth": {
+     "value": -2.6,
+     "kind": "warn",
+     "judge": {
+      "ja": "減収",
+      "en": "Revenue decline"
+     }
+    },
+    "equity": {
+     "value": 61.3709,
+     "kind": "good",
+     "judge": {
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
+     }
+    }
+   }
+  },
+  {
+   "rank": 16,
+   "code": "6301.T",
+   "name": "Komatsu Ltd.",
+   "sector": "Farm & Heavy Construction Machinery",
+   "source": [
+    "claude",
+    "chatgpt"
+   ],
+   "score": 46,
+   "price": 7486.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "高ROE",
+     "高成長",
+     "財務安定"
+    ],
+    "en": [
+     "High ROE",
+     "High growth",
+     "Stable finances"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 18.1018,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -1349,23 +1431,23 @@
      }
     },
     "pbr": {
-     "value": 2.2836,
-     "kind": "warn",
+     "value": 1.8984,
+     "kind": "mid",
      "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
+      "ja": "標準的な水準",
+      "en": "Standard"
      }
     },
     "div": {
-     "value": 1.99,
+     "value": 2.5381,
      "kind": "mid",
      "judge": {
-      "ja": "低めの水準",
-      "en": "Lowish"
+      "ja": "標準的な水準",
+      "en": "Standard"
      }
     },
     "roe": {
-     "value": 14.093,
+     "value": 11.619,
      "kind": "good",
      "judge": {
       "ja": "高い水準",
@@ -1373,33 +1455,108 @@
      }
     },
     "growth": {
-     "value": 8.9,
-     "kind": "mid",
+     "value": 14.7,
+     "kind": "good",
      "judge": {
-      "ja": "安定成長",
-      "en": "Steady growth"
+      "ja": "高成長とされる水準",
+      "en": "Considered high growth"
      }
     },
     "equity": {
-     "value": 39.3835,
-     "kind": "mid",
+     "value": 54.6513,
+     "kind": "good",
      "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
      }
     }
    }
   },
   {
-   "rank": 16,
+   "rank": 17,
+   "code": "8306.T",
+   "name": "Mitsubishi UFJ Financial Group, Inc.",
+   "sector": "Banks - Diversified",
+   "source": [
+    "watch"
+   ],
+   "score": 46,
+   "price": 3611.0,
+   "currency": "JPY",
+   "good": {
+    "ja": [
+     "急成長"
+    ],
+    "en": [
+     "Rapid growth"
+    ]
+   },
+   "warn": {
+    "ja": [],
+    "en": []
+   },
+   "metrics": {
+    "per": {
+     "value": 15.2633,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "pbr": {
+     "value": 1.7905,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "div": {
+     "value": 2.6585,
+     "kind": "mid",
+     "judge": {
+      "ja": "標準的な水準",
+      "en": "Standard"
+     }
+    },
+    "roe": {
+     "value": 9.459,
+     "kind": "mid",
+     "judge": {
+      "ja": "目安の8%を満たす",
+      "en": "Meets the 8% benchmark"
+     }
+    },
+    "growth": {
+     "value": 28.8,
+     "kind": "good",
+     "judge": {
+      "ja": "急成長とされる水準",
+      "en": "Considered rapid growth"
+     }
+    },
+    "equity": {
+     "value": 5.1592,
+     "kind": "na",
+     "judge": {
+      "ja": "金融業のため目安の対象外",
+      "en": "Financials: benchmark not applicable"
+     }
+    }
+   }
+  },
+  {
+   "rank": 18,
    "code": "8058.T",
    "name": "Mitsubishi Corporation",
    "sector": "Conglomerates",
    "source": [
-    "watch"
+    "claude",
+    "chatgpt"
    ],
-   "score": 49,
-   "price": 4859.0,
+   "score": 42,
+   "price": 4677.0,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -1421,7 +1578,7 @@
    },
    "metrics": {
     "per": {
-     "value": 23.148,
+     "value": 22.315,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -1429,7 +1586,7 @@
      }
     },
     "pbr": {
-     "value": 1.8471,
+     "value": 1.7779,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -1437,7 +1594,7 @@
      }
     },
     "div": {
-     "value": 2.5931,
+     "value": 2.694,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -1471,422 +1628,15 @@
    }
   },
   {
-   "rank": 17,
-   "code": "8316.T",
-   "name": "Sumitomo Mitsui Financial Group, Inc.",
-   "sector": "Banks - Diversified",
-   "source": [
-    "claude"
-   ],
-   "score": 47,
-   "price": 6919.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "急成長"
-    ],
-    "en": [
-     "Rapid growth"
-    ]
-   },
-   "warn": {
-    "ja": [],
-    "en": []
-   },
-   "metrics": {
-    "per": {
-     "value": 15.5037,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "pbr": {
-     "value": 1.6324,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "div": {
-     "value": 1.3008,
-     "kind": "mid",
-     "judge": {
-      "ja": "低めの水準",
-      "en": "Lowish"
-     }
-    },
-    "roe": {
-     "value": 8.569,
-     "kind": "mid",
-     "judge": {
-      "ja": "目安の8%を満たす",
-      "en": "Meets the 8% benchmark"
-     }
-    },
-    "growth": {
-     "value": 24.8,
-     "kind": "good",
-     "judge": {
-      "ja": "急成長とされる水準",
-      "en": "Considered rapid growth"
-     }
-    },
-    "equity": {
-     "value": 4.8053,
-     "kind": "na",
-     "judge": {
-      "ja": "金融業のため目安の対象外",
-      "en": "Financials: benchmark not applicable"
-     }
-    }
-   }
-  },
-  {
-   "rank": 18,
-   "code": "4452.T",
-   "name": "Kao Corporation",
-   "sector": "Household & Personal Products",
-   "source": [
-    "chatgpt"
-   ],
-   "score": 44,
-   "price": 3513.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高ROE",
-     "財務安定"
-    ],
-    "en": [
-     "High ROE",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 25.1252,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 2.8393,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 2.2203,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "roe": {
-     "value": 12.319,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 9.4,
-     "kind": "mid",
-     "judge": {
-      "ja": "安定成長",
-      "en": "Steady growth"
-     }
-    },
-    "equity": {
-     "value": 56.7491,
-     "kind": "good",
-     "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
-     }
-    }
-   }
-  },
-  {
    "rank": 19,
-   "code": "4502.T",
-   "name": "Takeda Pharmaceutical Company Limited",
-   "sector": "Drug Manufacturers - Specialty & Generic",
-   "source": [
-    "claude",
-    "chatgpt"
-   ],
-   "score": 44,
-   "price": 5969.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高配当",
-     "高成長",
-     "財務安定"
-    ],
-    "en": [
-     "High yield",
-     "High growth",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "赤字"
-    ],
-    "en": [
-     "High PER",
-     "Loss-making"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 42.5173,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 1.2481,
-     "kind": "mid",
-     "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
-     }
-    },
-    "div": {
-     "value": 3.4177,
-     "kind": "good",
-     "judge": {
-      "ja": "高配当とされる水準",
-      "en": "Considered high yield"
-     }
-    },
-    "roe": {
-     "value": -2.262,
-     "kind": "warn",
-     "judge": {
-      "ja": "赤字",
-      "en": "Loss-making"
-     }
-    },
-    "growth": {
-     "value": 10.2,
-     "kind": "good",
-     "judge": {
-      "ja": "高成長とされる水準",
-      "en": "Considered high growth"
-     }
-    },
-    "equity": {
-     "value": 47.8963,
-     "kind": "good",
-     "judge": {
-      "ja": "安定とされる水準",
-      "en": "Considered stable"
-     }
-    }
-   }
-  },
-  {
-   "rank": 20,
-   "code": "6861.T",
-   "name": "Keyence Corporation",
-   "sector": "Scientific & Technical Instruments",
-   "source": [
-    "watch"
-   ],
-   "score": 42,
-   "price": 79600.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "急成長",
-     "財務安定"
-    ],
-    "en": [
-     "Rapid growth",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 43.29,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 5.44,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 0.691,
-     "kind": "mid",
-     "judge": {
-      "ja": "低めの水準",
-      "en": "Lowish"
-     }
-    },
-    "roe": {
-     "value": null,
-     "kind": "na",
-     "judge": {
-      "ja": "データなし",
-      "en": "No data"
-     }
-    },
-    "growth": {
-     "value": 32.8,
-     "kind": "good",
-     "judge": {
-      "ja": "急成長とされる水準",
-      "en": "Considered rapid growth"
-     }
-    },
-    "equity": {
-     "value": 94.5736,
-     "kind": "good",
-     "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
-     }
-    }
-   }
-  },
-  {
-   "rank": 21,
-   "code": "2802.T",
-   "name": "Ajinomoto Co., Inc.",
-   "sector": "Packaged Foods",
-   "source": [
-    "chatgpt"
-   ],
-   "score": 42,
-   "price": 5051.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高ROE",
-     "高成長",
-     "財務安定"
-    ],
-    "en": [
-     "High ROE",
-     "High growth",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 36.4957,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 6.2249,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 0.9899,
-     "kind": "mid",
-     "judge": {
-      "ja": "低めの水準",
-      "en": "Lowish"
-     }
-    },
-    "roe": {
-     "value": 18.486,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 13.2,
-     "kind": "good",
-     "judge": {
-      "ja": "高成長とされる水準",
-      "en": "Considered high growth"
-     }
-    },
-    "equity": {
-     "value": 42.5316,
-     "kind": "good",
-     "judge": {
-      "ja": "安定とされる水準",
-      "en": "Considered stable"
-     }
-    }
-   }
-  },
-  {
-   "rank": 22,
    "code": "6758.T",
    "name": "Sony Group Corporation",
    "sector": "Consumer Electronics",
    "source": [
     "watch"
    ],
-   "score": 40,
-   "price": 3710.0,
+   "score": 37,
+   "price": 3714.0,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -1908,7 +1658,7 @@
    },
    "metrics": {
     "per": {
-     "value": 19.9205,
+     "value": 19.9035,
      "kind": "mid",
      "judge": {
       "ja": "標準的な水準",
@@ -1916,7 +1666,7 @@
      }
     },
     "pbr": {
-     "value": 2.6032,
+     "value": 2.606,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -1924,7 +1674,7 @@
      }
     },
     "div": {
-     "value": 0.9434,
+     "value": 0.9424,
      "kind": "mid",
      "judge": {
       "ja": "低めの水準",
@@ -1958,98 +1708,15 @@
    }
   },
   {
-   "rank": 23,
-   "code": "4063.T",
-   "name": "Shin-Etsu Chemical Co., Ltd.",
-   "sector": "Chemicals",
-   "source": [
-    "watch"
-   ],
-   "score": 38,
-   "price": 5889.0,
-   "currency": "JPY",
-   "good": {
-    "ja": [
-     "高ROE",
-     "財務安定"
-    ],
-    "en": [
-     "High ROE",
-     "Stable finances"
-    ]
-   },
-   "warn": {
-    "ja": [
-     "PER割高",
-     "PBR割高"
-    ],
-    "en": [
-     "High PER",
-     "High PBR"
-    ]
-   },
-   "metrics": {
-    "per": {
-     "value": 23.3098,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "pbr": {
-     "value": 2.4024,
-     "kind": "warn",
-     "judge": {
-      "ja": "割高とされる水準",
-      "en": "Considered expensive"
-     }
-    },
-    "div": {
-     "value": 1.9698,
-     "kind": "mid",
-     "judge": {
-      "ja": "低めの水準",
-      "en": "Lowish"
-     }
-    },
-    "roe": {
-     "value": 11.232,
-     "kind": "good",
-     "judge": {
-      "ja": "高い水準",
-      "en": "High"
-     }
-    },
-    "growth": {
-     "value": 5.4,
-     "kind": "mid",
-     "judge": {
-      "ja": "安定成長",
-      "en": "Steady growth"
-     }
-    },
-    "equity": {
-     "value": 78.8503,
-     "kind": "good",
-     "judge": {
-      "ja": "健全とされる水準",
-      "en": "Considered sound"
-     }
-    }
-   }
-  },
-  {
-   "rank": 24,
+   "rank": 20,
    "code": "6501.T",
    "name": "Hitachi, Ltd.",
    "sector": "Conglomerates",
    "source": [
-    "claude",
-    "chatgpt"
+    "claude"
    ],
-   "score": 38,
-   "price": 5536.0,
+   "score": 34,
+   "price": 5427.0,
    "currency": "JPY",
    "good": {
     "ja": [
@@ -2073,7 +1740,7 @@
    },
    "metrics": {
     "per": {
-     "value": 31.3477,
+     "value": 30.7444,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -2081,7 +1748,7 @@
      }
     },
     "pbr": {
-     "value": 3.7771,
+     "value": 3.7027,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -2089,7 +1756,7 @@
      }
     },
     "div": {
-     "value": 1.0116,
+     "value": 1.0319,
      "kind": "mid",
      "judge": {
       "ja": "低めの水準",
@@ -2123,32 +1790,40 @@
    }
   },
   {
-   "rank": 25,
-   "code": "8766.T",
-   "name": "Tokio Marine Holdings, Inc.",
-   "sector": "Insurance - Property & Casualty",
+   "rank": 21,
+   "code": "4063.T",
+   "name": "Shin-Etsu Chemical Co., Ltd.",
+   "sector": "Chemicals",
    "source": [
     "claude",
     "chatgpt"
    ],
-   "score": 25,
-   "price": 7992.0,
+   "score": 31,
+   "price": 5873.0,
    "currency": "JPY",
    "good": {
-    "ja": [],
-    "en": []
+    "ja": [
+     "高ROE",
+     "財務安定"
+    ],
+    "en": [
+     "High ROE",
+     "Stable finances"
+    ]
    },
    "warn": {
     "ja": [
-     "PER割高"
+     "PER割高",
+     "PBR割高"
     ],
     "en": [
-     "High PER"
+     "High PER",
+     "High PBR"
     ]
    },
    "metrics": {
     "per": {
-     "value": 28.6534,
+     "value": 23.2705,
      "kind": "warn",
      "judge": {
       "ja": "割高とされる水準",
@@ -2156,15 +1831,15 @@
      }
     },
     "pbr": {
-     "value": 1.8524,
-     "kind": "mid",
+     "value": 2.3959,
+     "kind": "warn",
      "judge": {
-      "ja": "標準的な水準",
-      "en": "Standard"
+      "ja": "割高とされる水準",
+      "en": "Considered expensive"
      }
     },
     "div": {
-     "value": 1.635,
+     "value": 1.9751,
      "kind": "mid",
      "judge": {
       "ja": "低めの水準",
@@ -2172,27 +1847,27 @@
      }
     },
     "roe": {
-     "value": null,
-     "kind": "na",
+     "value": 11.232,
+     "kind": "good",
      "judge": {
-      "ja": "データなし",
-      "en": "No data"
+      "ja": "高い水準",
+      "en": "High"
      }
     },
     "growth": {
-     "value": 0.1,
+     "value": 5.4,
      "kind": "mid",
      "judge": {
-      "ja": "低成長",
-      "en": "Low growth"
+      "ja": "安定成長",
+      "en": "Steady growth"
      }
     },
     "equity": {
-     "value": 24.1058,
-     "kind": "na",
+     "value": 78.8503,
+     "kind": "good",
      "judge": {
-      "ja": "金融業のため目安の対象外",
-      "en": "Financials: benchmark not applicable"
+      "ja": "健全とされる水準",
+      "en": "Considered sound"
      }
     }
    }
@@ -2204,21 +1879,38 @@
    "label": "Claude",
    "picks": [
     {
-     "code": "8316.T",
+     "code": "8058.T",
      "name": {
-      "ja": "Sumitomo Mitsui Financial Group, Inc.",
-      "en": "Sumitomo Mitsui Financial Group, Inc."
+      "ja": "Mitsubishi Corporation",
+      "en": "Mitsubishi Corporation"
      },
      "reason": {
-      "ja": "2026年4-6月期の純利益は前年同期比33%増の5014億円で、市場予想を上回った。国内融資の増加と日銀の利上げで資金利益が伸びている。通期は純利益1兆7000億円（4期連続の最高益）を見込み、年間配当は1株180円の予想。成長と配当の両方を見る方針に合う。PER・ROEの実数値は未確認。",
-      "en": "Net profit for April–June 2026 rose 33% year on year to ¥501.4bn, above market expectations. Growth in domestic lending and BOJ rate hikes lifted net interest income. The company forecasts a record ¥1.7tn net profit for the full year, its fourth straight record, and a ¥180 annual dividend. That suits a balance of growth and income. Current PER and ROE are unverified."
+      "ja": "総合商社で、事業が多くの分野に分散している。2026年3月期の年間配当は110円で、2027年3月期は125円へ15円の増配を予定しており、配当を重視する方針に合う。ROEは8.5%と一定の水準を保っている。PERと現在の配当利回りは未確認。",
+      "en": "A diversified trading house. It paid an annual dividend of ¥110 for FY3/2026 and plans ¥125 for FY3/2027, a ¥15 increase, which suits a dividend-focused approach. ROE was 8.5%. Its P/E and current dividend yield are unverified."
      },
      "risk": {
-      "ja": "金利の動きや景気悪化に伴う貸倒れの増加に業績が左右されやすい。海外事業や政策保有株の株価変動も利益の振れにつながる。",
-      "en": "Earnings depend heavily on interest-rate moves and on credit costs if the economy weakens. Overseas operations and swings in cross-held shares can also make profits volatile."
+      "ja": "ROEは前期の10.3%から8.5%に下がった。資源価格や為替で利益が大きく変わりやすい。2027年3月期第1四半期の実績は未確認。",
+      "en": "ROE fell from 10.3% to 8.5%. Profits can swing widely with commodity prices and exchange rates. Q1 FY3/2027 results are unverified."
      },
-     "rank": 17,
-     "score": 47
+     "rank": 18,
+     "score": 42
+    },
+    {
+     "code": "9433.T",
+     "name": {
+      "ja": "KDDI Corporation",
+      "en": "KDDI Corporation"
+     },
+     "reason": {
+      "ja": "2027年3月期第1四半期は、売上高が前年同期比5.1%増、調整後営業利益が21.1%増だった。モバイル、金融、データセンターが伸びている。年間配当は84円（4円の増配）を予定し、25期連続の増配となる見通し。配当性向は42.8%の予定。",
+      "en": "In Q1 FY3/2027, sales rose 5.1% and adjusted operating profit rose 21.1% year on year, helped by mobile, finance and data centers. It plans a ¥84 annual dividend, up ¥4, which would be its 25th straight annual increase. The planned payout ratio is 42.8%."
+     },
+     "risk": {
+      "ja": "国内の通信市場は大きく伸びにくく、料金を下げるよう求める政治的な圧力もある。データセンターなどへの投資負担が重くなる可能性がある。PERは未確認。",
+      "en": "Japan's telecom market has limited room to grow, and there is political pressure to lower fees. Spending on data centers and similar projects could weigh on results. P/E is unverified."
+     },
+     "rank": 14,
+     "score": 48
     },
     {
      "code": "8766.T",
@@ -2227,32 +1919,15 @@
       "en": "Tokio Marine Holdings, Inc."
      },
      "reason": {
-      "ja": "2027年3月期の配当予想は前期比27円増の245円で、7期連続の増配となる。2026年度の自社株買いは年間4000億円の方針で、その第1弾として2000億円の取得を決議した。前期のROEは18.7%との報道があり、株主還元と資本効率が高い。売上成長率とPERは未確認。",
-      "en": "The FY3/2027 dividend forecast is ¥245, up ¥27, which would be a seventh straight annual increase. The company plans ¥400bn of buybacks in FY2026 and has approved a first ¥200bn tranche. ROE for the prior year was reported at 18.7%. Shareholder returns and capital efficiency are high. Revenue growth and PER are unverified."
+      "ja": "2027年3月期第1四半期は、保険収益が前年同期比12.3%増の2兆471億円に伸びた。2026年8月25日には、株式分割、株主優待の導入、配当予想の修正、自社株買いの内容変更を発表しており、株主への還元に積極的な姿勢が見える。ROEは未確認。",
+      "en": "In Q1 FY3/2027, insurance revenue rose 12.3% year on year to ¥2.047 trillion. On August 25, 2026, it announced a stock split, a new shareholder perks program, a revised dividend forecast and changes to its share buyback, showing an active approach to shareholder returns. ROE is unverified."
      },
      "risk": {
-      "ja": "大規模な自然災害による保険金の支払い、海外事業の損失、市場変動による運用益の振れが主なリスク。会計基準のIFRS移行で前年との比較も難しくなる。",
-      "en": "Main risks are large natural-disaster claims, losses in overseas businesses and investment-income swings from market moves. The switch to IFRS also makes comparisons with past years harder."
+      "ja": "大きな自然災害が起きると保険金の支払いが増え、利益が減る。金利や株価の動きも業績に響く。株式分割後の配当額と利回りは未確認。",
+      "en": "Major natural disasters raise claim payments and cut profits. Interest-rate and stock-market moves also affect results. The post-split dividend and yield are unverified."
      },
-     "rank": 25,
-     "score": 25
-    },
-    {
-     "code": "8001.T",
-     "name": {
-      "ja": "ITOCHU Corporation",
-      "en": "ITOCHU Corporation"
-     },
-     "reason": {
-      "ja": "2026年4-6月期の純利益は前年同期比3%増の2937億円で、基礎収益は38%増と4-6月期で過去最高だった。機械や繊維など非資源分野が好調。通期は純利益9500億円（3年連続の最高益）を計画し、実質12期連続の増配となる年44円の配当と、最大3000億円の自社株買いを発表した。",
-      "en": "Net profit for April–June 2026 rose 3% to ¥293.7bn. Core earnings rose 38% to a record for that quarter, led by non-resource businesses such as machinery and textiles. The company targets ¥950bn full-year net profit, a third straight record, and plans a ¥44 annual dividend (a 12th straight increase after adjusting for the split). It also announced buybacks of up to ¥300bn."
-     },
-     "risk": {
-      "ja": "円安が利益を押し上げており、円高になれば逆に働く。中国関連の投資や資源価格の変動も利益の変動要因。PBRなどの割安度は未確認。",
-      "en": "A weak yen has boosted profits and would hurt if it reverses. China-related investments and commodity prices can also swing earnings. Valuation metrics such as PBR are unverified."
-     },
-     "rank": 15,
-     "score": 50
+     "rank": 2,
+     "score": 68
     },
     {
      "code": "6501.T",
@@ -2261,32 +1936,66 @@
       "en": "Hitachi, Ltd."
      },
      "reason": {
-      "ja": "2026年4-6月期の調整後EBITAは前年同期比36%増の3235億円で、売上収益とともに第1四半期として過去最高だった。通期は売上収益11.1兆円（4.8%増）、純利益8500億円（5.9%増）を見込む。成長率とROEの面を補う候補。PERと配当利回りの実数値は未確認。",
-      "en": "Adjusted EBITA for April–June 2026 rose 36% to ¥323.5bn, and both revenue and EBITA were first-quarter records. The company forecasts ¥11.1tn full-year revenue (+4.8%) and ¥850bn net profit (+5.9%). Hitachi adds growth and ROE to the list. Current PER and dividend yield are unverified."
+      "ja": "2027年3月期第1四半期は、売上収益が前年同期比20%増の2兆7095億円、調整後営業利益が39%増の2942億円で、どちらも第1四半期として過去最高だった。エナジー部門の受注は87%増えており、売上の伸びを重視する項目で評価できる。",
+      "en": "In Q1 FY3/2027, revenue rose 20% year on year to ¥2.7095 trillion and adjusted operating profit rose 39% to ¥294.2 billion, both first-quarter records. Energy-segment orders jumped 87%, which scores well on the sales-growth criterion."
      },
      "risk": {
-      "ja": "中間配当予想は28円で、配当利回りは他の候補より低い可能性がある。成長期待で株価が割高になっている可能性や、海外の大型案件が遅れるリスクがある。",
-      "en": "The interim dividend forecast is ¥28, so the yield may be lower than other picks. The share price may already reflect high growth expectations, and large overseas projects could be delayed."
+      "ja": "成長への期待が大きく、株価の割高感（PER）が高い可能性がある（数値は未確認）。配当利回りは低めとみられる。大型案件の進み具合や為替の影響を受けやすい。",
+      "en": "High growth expectations may mean a rich valuation (P/E unverified), and the dividend yield is likely low. Results are sensitive to how large projects progress and to exchange rates."
      },
-     "rank": 24,
-     "score": 38
+     "rank": 20,
+     "score": 34
     },
     {
-     "code": "4502.T",
+     "code": "4063.T",
      "name": {
-      "ja": "Takeda Pharmaceutical Company Limited",
-      "en": "Takeda Pharmaceutical Company Limited"
+      "ja": "Shin-Etsu Chemical Co., Ltd.",
+      "en": "Shin-Etsu Chemical Co., Ltd."
      },
      "reason": {
-      "ja": "2026年度第1四半期の売上収益は1兆2200億円で、実際の為替レートでは10.2%増だった。会社は通期ガイダンス通りに進んでいると説明している。2026年度の年間配当は204円の予想で、前年の200円から増える。配当を重視する方針に合う。PER・PBRの実数値は未確認。",
-      "en": "Q1 FY2026 revenue was ¥1.22tn, up 10.2% at actual exchange rates, and management says it is on track with full-year guidance. The FY2026 annual dividend is forecast at ¥204, up from ¥200. That fits an income-focused approach. Current PER and PBR are unverified."
+      "ja": "2027年3月期第1四半期は、売上高が前年同期比5.4%増、営業利益が4.2%増だった。通期では営業利益10.2%増、純利益10.7%増の7000億円を見込み、背景にはAI関連の需要がある。自己資本比率は2025年6月末で79.0%と、財務が非常に健全。",
+      "en": "In Q1 FY3/2027, sales rose 5.4% and operating profit rose 4.2% year on year. For the full year it forecasts operating profit up 10.2% to ¥700 billion and net profit up 10.7%, supported by AI-related demand. Its equity ratio was 79.0% at June 2025, showing very strong finances."
      },
      "risk": {
-      "ja": "為替の影響を除くと売上は0.5%減で、コアEPSも前年を下回り、決算後に株価は下落した。主力薬の特許切れや開発中止も懸念材料。",
-      "en": "At constant exchange rates revenue fell 0.5% and core EPS declined, and the shares fell after the results. Patent expiries on key drugs and pipeline setbacks are further concerns."
+      "ja": "塩ビ（PVC）と半導体材料の市況によって利益が変わりやすい。前の期の第1四半期は13%の減益だった。配当利回りとPERは未確認。",
+      "en": "Profits depend on PVC and semiconductor-materials market conditions. Operating profit fell 13% in the prior-year first quarter. Dividend yield and P/E are unverified."
      },
-     "rank": 19,
-     "score": 44
+     "rank": 21,
+     "score": 31
+    },
+    {
+     "code": "2914.T",
+     "name": {
+      "ja": "Japan Tobacco Inc.",
+      "en": "Japan Tobacco Inc."
+     },
+     "reason": {
+      "ja": "2026年12月期の中間決算は、売上収益が前年同期比17.7%増、営業利益が29.0%増だった。フィリピンやロシアで値上げが浸透し、業績予想を上方修正した。年間配当予想は30円増の272円で、報道によると予想配当利回りは約4.08%と、高配当を重視する項目に合う。",
+      "en": "In the first half of FY12/2026, revenue rose 17.7% and operating profit rose 29.0% year on year. Price increases took hold in the Philippines and Russia, and the company raised its forecasts. The annual dividend forecast rose ¥30 to ¥272, a reported forecast yield of about 4.08%, which fits the dividend criterion."
+     },
+     "risk": {
+      "ja": "たばこの規制が強まる可能性や、喫煙者の減少が長く続くことがリスク。ロシアでの事業をめぐる地政学リスクや為替の影響も大きい。",
+      "en": "Risks include tighter tobacco regulation and the long-term decline in smoking. Geopolitical risk from its Russia business and currency moves are also significant."
+     },
+     "rank": 6,
+     "score": 59
+    },
+    {
+     "code": "8316.T",
+     "name": {
+      "ja": "Sumitomo Mitsui Financial Group, Inc.",
+      "en": "Sumitomo Mitsui Financial Group, Inc."
+     },
+     "reason": {
+      "ja": "2027年3月期第1四半期の純利益は前年同期比33.0%増の5014億円だった。通期では純利益7.4%増の1兆7000億円を見込み、金利上昇が追い風になっている。配当予想は1株180円。ウォッチリストにある三菱UFJ以外の大手銀行として比べる候補になる。",
+      "en": "Q1 FY3/2027 net profit rose 33.0% year on year to ¥501.4 billion. It forecasts full-year net profit up 7.4% to ¥1.7 trillion, helped by rising interest rates. The dividend forecast is ¥180 per share. It offers a comparison with MUFG, which is already on the watchlist."
+     },
+     "risk": {
+      "ja": "取引先の業績悪化で貸し倒れ関連の費用が増えたり、金利の動きが変わったりすると利益に響く。銀行なので自己資本比率が構造的に低い。第2四半期の90円と期末の45円という配当予想の内訳は株式分割の影響とみられるが未確認。",
+      "en": "Higher credit costs or shifts in interest rates could hurt profits. As a bank, its equity ratio is structurally low. The split of the dividend forecast (¥90 for the first half, ¥45 at year-end) may reflect a stock split, but this is unverified."
+     },
+     "rank": 10,
+     "score": 54
     },
     {
      "code": "6301.T",
@@ -2295,15 +2004,15 @@
       "en": "Komatsu Ltd."
      },
      "reason": {
-      "ja": "2026年4-6月期は売上高が前年同期比14.7%増の1兆431億円、純利益が5.4%増の962億円だった。会社は通期予想を上方修正した。年間配当は190円（3期連続で同額）の予想で、報道ベースの配当利回りは2.6%台。業種分散のため機械セクターから選んだ。",
-      "en": "April–June 2026 revenue rose 14.7% to ¥1.043tn and net profit rose 5.4% to ¥96.2bn, and full-year guidance was raised. The annual dividend is forecast at ¥190, flat for a third year, and reports put the yield around 2.6%. Komatsu adds machinery to diversify the list."
+      "ja": "2027年3月期第1四半期は、円安と販売価格の改善で売上高が前年同期比14.7%増、営業利益が8.0%増だった。年間配当は1株190円を維持する予定で、報道によると配当利回りは2.6%台。建設機械で世界的な地位を持つ。",
+      "en": "In Q1 FY3/2027, a weaker yen and better pricing lifted sales 14.7% and operating profit 8.0% year on year. It plans to keep the annual dividend at ¥190, a reported yield in the 2.6% range. It holds a strong global position in construction machinery."
      },
      "risk": {
-      "ja": "上方修正後も通期の純利益は前期比7.3%減の見通し。建設機械の需要は景気、資源価格、為替に左右されやすく、増配は見込まれていない。",
-      "en": "Even after the upgrade, full-year net profit is forecast to fall 7.3%. Construction-machinery demand is sensitive to the economy, commodity prices and currencies, and no dividend increase is planned."
+      "ja": "通期の純利益は前期比7%の減益を見込んでいる。米国の関税負担や中東情勢、景気の波に影響を受けやすい。",
+      "en": "It forecasts full-year net profit down 7%. Results are exposed to US tariff costs, the Middle East situation and economic cycles."
      },
-     "rank": 9,
-     "score": 55
+     "rank": 16,
+     "score": 46
     },
     {
      "code": "1928.T",
@@ -2312,66 +2021,32 @@
       "en": "Sekisui House, Ltd."
      },
      "reason": {
-      "ja": "2026年1月期は営業利益が16.0%増の1804億円、純利益が23.1%増の1251億円だった。2027年1月期の年間配当予想は145円で、15期連続の増配となる。配当利回りは約4%との報道があり、長期の増配実績を持つ住宅株として配当面で方針に合う。",
-      "en": "For FY1/2026, operating profit rose 16.0% to ¥180.4bn and net profit rose 23.1% to ¥125.1bn. The FY1/2027 dividend forecast is ¥145, which would be a 15th straight increase, and reports put the yield near 4%. It fits the income side of the strategy."
+      "ja": "2027年1月期の中間決算は、売上高が2.5%減ったものの、営業利益は16.0%増、純利益は23.1%増で、報道では中間期として最高益とされる。年間配当は145円を予定し、実現すれば15期連続の増配となる。",
+      "en": "In the first half of FY1/2027, sales fell 2.5%, but operating profit rose 16.0% and net profit rose 23.1%, which reports called a record first-half profit. It plans a ¥145 annual dividend, which would be a 15th straight annual increase."
      },
      "risk": {
-      "ja": "前期は減収だったと報じられている。中東情勢による資材価格の上昇、国内住宅需要の減少、米国住宅市場の変動が業績の下振れ要因になる。",
-      "en": "Revenue was reported as down last year. Higher material costs linked to the Middle East, shrinking domestic housing demand and swings in the US housing market could weigh on results."
-     },
-     "rank": 4,
-     "score": 64
-    },
-    {
-     "code": "1808.T",
-     "name": {
-      "ja": "HASEKO Corporation",
-      "en": "HASEKO Corporation"
-     },
-     "reason": {
-      "ja": "2026年3月期第3四半期累計の売上高は6.7%増の8931億円、営業利益は11.1%増の638億円だった。予想配当利回りは3.4%前後（2026年9月1日時点）、PBRは1.36倍との情報がある。総還元性向50%を掲げ、専門誌では同業より高配当で割安と紹介されている。",
-      "en": "Nine-month FY3/2026 revenue rose 6.7% to ¥893.1bn and operating profit rose 11.1% to ¥63.8bn. Data show a forecast yield around 3.4% as of Sept 1, 2026 and a PBR of about 1.36x. The company targets a 50% total payout ratio, and a financial magazine called it higher-yielding and cheaper than peers."
-     },
-     "risk": {
-      "ja": "マンション市場への依存度が高い。建築費や人件費の上昇、金利上昇による販売の鈍化がリスク。最新の四半期決算の内容は未確認。",
-      "en": "The business is heavily tied to the condominium market. Rising construction and labor costs, and slower sales if interest rates rise, are risks. The latest quarterly results are unverified."
+      "ja": "売上は減っており、住宅需要の伸び悩みや金利上昇の影響が心配される。米国の住宅事業は景気の影響を受けやすい。PERとROEは未確認。",
+      "en": "Sales are falling, and weak housing demand and rising rates are concerns. Its US housing business is sensitive to economic conditions. P/E and ROE are unverified."
      },
      "rank": 5,
-     "score": 63
+     "score": 60
     },
     {
-     "code": "1333.T",
+     "code": "4519.T",
      "name": {
-      "ja": "Umios Corporation",
-      "en": "Umios Corporation"
+      "ja": "Chugai Pharmaceutical Co., Ltd.",
+      "en": "Chugai Pharmaceutical Co., Ltd."
      },
      "reason": {
-      "ja": "水産最大手で、前期の営業利益は過去最高、今期も増収・営業増益を計画していると報じられている。予想PERは約13.2倍、予想配当利回りは約3.4%とのデータがある。食品セクターの割安・配当候補として分散にも役立つ。自己資本比率とROEは未確認。",
-      "en": "Japan's largest seafood company reportedly posted record operating profit last year and plans higher revenue and operating profit this year. Data show a forecast PER of about 13.2x and a yield around 3.4%. It adds a value-and-dividend name from food to the list. Equity ratio and ROE are unverified."
+      "ja": "2026年12月期の中間決算は、売上収益が前年同期比14.7%増、営業利益が16.9%増と大きく伸びた。通期ではCore営業利益7.5%増を見込み、年間配当は132円を予定している。医薬品セクターとして、ポートフォリオの業種を分散する役割がある。",
+      "en": "In the first half of FY12/2026, revenue rose 14.7% and operating profit rose 16.9% year on year. It forecasts full-year Core operating profit up 7.5% and plans a ¥132 annual dividend. As a pharmaceutical stock, it helps diversify the portfolio by sector."
      },
      "risk": {
-      "ja": "営業利益率は約3%と低く、漁獲量、魚の市況、為替、原料コストの変動を受けやすい。データの基準日は未確認。",
-      "en": "Operating margin is thin at about 3%, so profits are exposed to catch volumes, fish prices, currencies and input costs. The date of the valuation data is unverified."
+      "ja": "PERが高く、配当利回りは低い可能性がある（どちらも未確認）。ロシュへの輸出に大きく依存しており、新薬開発の結果によって業績が左右される。",
+      "en": "It may have a high P/E and a low dividend yield (both unverified). It relies heavily on exports to Roche, and results depend on how new drug trials turn out."
      },
-     "rank": 10,
-     "score": 55
-    },
-    {
-     "code": "5108.T",
-     "name": {
-      "ja": "Bridgestone Corporation",
-      "en": "Bridgestone Corporation"
-     },
-     "reason": {
-      "ja": "2026年12月期は売上収益4.5兆円（1.6%増）、調整後営業利益5150億円（4.3%増）、純利益3400億円（3.9%増）を見込む。配当予想は年125円で、株式分割前に換算すると250円となり、前期の230円から増える。増配を続けて株主還元を強める方針で、財務の安定性を重視する人にも候補になる。",
-      "en": "For FY12/2026 Bridgestone forecasts ¥4.5tn revenue (+1.6%), ¥515bn adjusted operating profit (+4.3%) and ¥340bn net profit (+3.9%). The ¥125 dividend forecast equals ¥250 before the 2-for-1 split, up from ¥230. Management is committed to continued increases and stronger returns. It suits investors who value financial stability."
-     },
-     "risk": {
-      "ja": "売上成長率は低い。天然ゴムなど原材料価格、米国の関税や為替、新興国メーカーとの価格競争が利益を圧迫する可能性がある。PERの実数値は未確認。",
-      "en": "Revenue growth is low. Raw-material costs such as natural rubber, US tariffs, currencies and price competition from emerging-market makers could squeeze margins. Current PER is unverified."
-     },
-     "rank": 6,
-     "score": 62
+     "rank": 11,
+     "score": 54
     }
    ]
   },
@@ -2379,21 +2054,72 @@
    "label": "ChatGPT",
    "picks": [
     {
-     "code": "1928.T",
+     "code": "1925.T",
      "name": {
-      "ja": "Sekisui House, Ltd.",
-      "en": "Sekisui House, Ltd."
+      "ja": "Daiwa House Industry Co., Ltd.",
+      "en": "Daiwa House Industry Co., Ltd."
      },
      "reason": {
-      "ja": "2026年9月25日時点で予想PER9.75倍、PBR0.97倍、予想配当利回り4.30%。2027年1月期中間期は営業利益が前年同期比16.0%増。売上成長には弱さがあるものの、利益改善と割安性、配当の組み合わせを評価する住宅分野の候補。",
-      "en": "At September 25, 2026, forward P/E was 9.75, P/B 0.97 and forecast dividend yield 4.30%. Operating profit rose 16.0% year over year in the first half ending July 2026. Despite weak sales growth, improving profit, valuation and income make this housing company worth researching. [Valuation](https://finance.yahoo.co.jp/quote/1928.T/chart?trm=6m), [results](https://finance.yahoo.co.jp/quote/1928.N)."
+      "ja": "2026/9/30午前の予想PER10.14倍、予想配当利回り4.09%。実績PBR0.93倍、ROE12.72%、自己資本比率34.4%。27/3期第1四半期は前年同期比9.0%増収で、株価指標と配当、収益性のバランスを評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 10.14 and forecast dividend yield of 4.09%. Reported P/B was 0.93, ROE 12.72%, and equity ratio 34.4%. Revenue rose 9.0% year over year in Q1 FY ending March 2027. The combination of valuation, income and profitability merits research. [Source](https://finance.yahoo.co.jp/quote/1925.T)"
      },
      "risk": {
-      "ja": "中間期売上高は前年同期比2.5%減。米国住宅需要や金利動向に左右され、開発物件の売却時期でも利益が変動する。",
-      "en": "First-half revenue fell 2.5% year over year. US housing demand, interest rates and the timing of property disposals can affect earnings and weaken the apparent valuation advantage."
+      "ja": "第1四半期は増収増益でも、通期は大幅減益予想。有利子負債の増加とマンション事業の減益に注意が必要。",
+      "en": "Despite first-quarter growth, full-year guidance forecasts a substantial profit decline. Rising interest-bearing debt and weaker condominium earnings require attention. [Source](https://finance.yahoo.co.jp/quote/1925.T)"
      },
-     "rank": 4,
-     "score": 64
+     "rank": 1,
+     "score": 70
+    },
+    {
+     "code": "7751.T",
+     "name": {
+      "ja": "Canon Inc.",
+      "en": "Canon Inc."
+     },
+     "reason": {
+      "ja": "2026/9/30午前の予想PER11.70倍、予想配当利回り3.49%。実績PBR1.12倍、ROE9.66%、自己資本比率56.9%。26/12期中間期は前年同期比3.5%増収で、配当と財務余力を伴う緩やかな成長を評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 11.70 and forecast dividend yield of 3.49%. Reported P/B was 1.12, ROE 9.66%, and equity ratio 56.9%. First-half revenue for FY ending December 2026 increased 3.5% year over year, offering a research candidate combining moderate growth, dividends and financial capacity. [Source](https://finance.yahoo.co.jp/quote/7751.T)"
+     },
+     "risk": {
+      "ja": "中間期はメディカルとインダストリアルが減益。減価償却方法の変更による利益押し上げと、印刷需要の縮小に注意。",
+      "en": "Medical and industrial earnings declined in the first half. Assess the profit uplift from changed depreciation methods and the risk of shrinking printing demand. [Source](https://finance.yahoo.co.jp/quote/7751.T)"
+     },
+     "rank": 12,
+     "score": 53
+    },
+    {
+     "code": "9432.T",
+     "name": {
+      "ja": "NTT, Inc.",
+      "en": "NTT, Inc."
+     },
+     "reason": {
+      "ja": "2026/9/30午前の予想PER14.09倍、予想配当利回り3.18%。実績PBR1.40倍、ROE10.40%、自己資本比率20.8%。27/3期第1四半期は前年同期比10.9%増収。財務面の弱さを踏まえつつ、配当と収益性を評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 14.09 and forecast dividend yield of 3.18%. Reported P/B was 1.40, ROE 10.40%, and equity ratio 20.8%. Revenue increased 10.9% year over year in Q1 FY ending March 2027. Dividends and profitability merit research, while the weaker capital position warrants caution. [Source](https://finance.yahoo.co.jp/quote/9432.T)"
+     },
+     "risk": {
+      "ja": "通期の親会社帰属利益は5.5%減益予想。自己資本比率が低く、通信競争や設備投資、金利負担の影響に注意。",
+      "en": "Full-year attributable profit is forecast to decline 5.5%. The low equity ratio adds exposure to competitive pressure, network investment requirements and financing costs. [Source](https://finance.yahoo.co.jp/quote/9432.T)"
+     },
+     "rank": 13,
+     "score": 49
+    },
+    {
+     "code": "2503.T",
+     "name": {
+      "ja": "Kirin Holdings Company, Limited",
+      "en": "Kirin Holdings Company, Limited"
+     },
+     "reason": {
+      "ja": "2026/9/30午前の予想PER14.15倍、予想配当利回り2.70%。実績PBR1.64倍、ROE11.95%、自己資本比率36.8%。26/12期中間期は前年同期比7.2%増収で、食品分野への分散と成長・収益性の両立を評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 14.15 and forecast dividend yield of 2.70%. Reported P/B was 1.64, ROE 11.95%, and equity ratio 36.8%. First-half revenue for FY ending December 2026 grew 7.2% year over year. It merits research for consumer-sector diversification alongside growth and profitability. [Source](https://finance.yahoo.co.jp/quote/2503.T)"
+     },
+     "risk": {
+      "ja": "中間利益の大幅増加にはFour Roses売却益が含まれる。継続的な利益成長と区別し、原材料高や買収統合費用も確認したい。",
+      "en": "The sharp first-half profit increase includes a Four Roses disposal gain. Separate this from recurring growth and assess raw-material inflation and acquisition integration costs. [Source](https://finance.yahoo.co.jp/quote/2503.T)"
+     },
+     "rank": 7,
+     "score": 58
     },
     {
      "code": "5108.T",
@@ -2402,49 +2128,49 @@
       "en": "Bridgestone Corporation"
      },
      "reason": {
-      "ja": "2026年9月25日時点で予想PER14.26倍、予想配当利回り3.26%、実績自己資本比率63.7%。2026年中間期の売上収益は前年同期比9.7%増。財務の厚みと増収、配当を併せて評価でき、バランス方針との相性を調べたい候補。",
-      "en": "At September 25, 2026, forward P/E was 14.26 and forecast dividend yield 3.26%, while reported equity ratio was 63.7%. First-half 2026 revenue rose 9.7% year over year. Financial strength, revenue growth and dividends provide a useful combination for balanced research. [Market data](https://finance.yahoo.co.jp/quote/5108.T), [earnings](https://www.bridgestone.co.jp/ir/library/result/pdf/r8_2.pdf)."
+      "ja": "2026/9/30午前の予想PER14.16倍、予想配当利回り3.28%。実績PBR1.25倍、ROE8.85%、自己資本比率63.7%。26/12期中間期は前年同期比9.7%増収。財務の厚みと配当、売上成長の組み合わせを評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 14.16 and forecast dividend yield of 3.28%. Reported P/B was 1.25, ROE 8.85%, and equity ratio 63.7%. First-half revenue for FY ending December 2026 rose 9.7% year over year. Its capital base, dividend income and revenue growth form a balanced research case. [Source](https://finance.yahoo.co.jp/quote/5108.T)"
      },
      "risk": {
-      "ja": "大幅増益には前年の工場再編費用の反動が含まれる。原材料高や自動車・交換用タイヤ需要の減速による採算悪化に注意。",
-      "en": "The sharp profit rebound partly reflects prior-year factory restructuring costs. Higher raw-material prices and slower automotive or replacement-tire demand could pressure margins and limit further earnings growth."
+      "ja": "大幅増益には前年の工場再編費用の反動が含まれる。米国関税、天然ゴム価格、タイヤ需要の変動が利益を圧迫し得る。",
+      "en": "Strong profit growth partly reflects the absence of prior-year factory restructuring costs. US tariffs, natural-rubber prices and fluctuating tire demand could pressure earnings. [Source](https://finance.yahoo.co.jp/quote/5108.T)"
      },
-     "rank": 6,
-     "score": 62
+     "rank": 9,
+     "score": 56
     },
     {
-     "code": "4768.T",
+     "code": "8058.T",
      "name": {
-      "ja": "Otsuka Corporation",
-      "en": "Otsuka Corporation"
+      "ja": "Mitsubishi Corporation",
+      "en": "Mitsubishi Corporation"
      },
      "reason": {
-      "ja": "2026年中間期は売上高が前年同期比9.0%増、営業利益が8.0%増で、通期予想も上方修正。2026年9月25日時点の予想PER21.40倍、配当利回り2.87%、実績ROE16.81%を踏まえ、成長・収益性・還元のバランスを評価する。",
-      "en": "First-half 2026 revenue grew 9.0% and operating profit 8.0% year over year, accompanied by an upward revision to full-year guidance. At September 25, 2026, forward P/E was 21.40, forecast yield 2.87% and reported ROE 16.81%. These support a balanced growth, profitability and shareholder-return research case. [Source](https://finance.yahoo.co.jp/quote/4768.T)."
+      "ja": "2026/9/30午前の予想PER15.57倍、予想配当利回り2.67%。実績PBR1.78倍、ROE8.51%、自己資本比率39.1%。27/3期第1四半期は前年同期比22.8%増収。年間125円への増配計画と収益拡大を評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 15.57 and forecast dividend yield of 2.67%. Reported P/B was 1.78, ROE 8.51%, and equity ratio 39.1%. Revenue grew 22.8% year over year in Q1 FY ending March 2027. Expanding revenue and a planned annual dividend increase to ¥125 merit research. [Source](https://finance.yahoo.co.jp/quote/8058.T)"
      },
      "risk": {
-      "ja": "PBR3.36倍と純資産対比では割安でない。企業のIT投資減速や人件費上昇で成長が鈍れば、株価評価が切り下がる可能性。",
-      "en": "A P/B of 3.36 offers limited asset-based cheapness. Slower corporate IT spending or higher personnel costs could weaken growth and trigger a valuation downgrade."
+      "ja": "足元の増益は資源市況や投資先配当の増加に支えられる。商品価格下落、円高、大型投資の回収遅延が利益を下押しし得る。",
+      "en": "Recent earnings growth benefits from commodity conditions and higher investee dividends. Falling commodity prices, yen appreciation and delayed returns on major investments could reduce profits. [Source](https://finance.yahoo.co.jp/quote/8058.T)"
      },
-     "rank": 13,
-     "score": 54
+     "rank": 18,
+     "score": 42
     },
     {
-     "code": "8001.T",
+     "code": "1605.T",
      "name": {
-      "ja": "ITOCHU Corporation",
-      "en": "ITOCHU Corporation"
+      "ja": "Inpex Corporation",
+      "en": "Inpex Corporation"
      },
      "reason": {
-      "ja": "2027年3月期第1四半期の収益は前年同期比8.9%増。2026年9月25日時点で予想PER16.27倍、実績ROE14.59%、予想配当利回り1.99%。年間44円以上の配当方針もあり、資本効率と成長、還元を評価する商社候補。",
-      "en": "Revenue increased 8.9% year over year in the first quarter ending June 2026. At September 25, forward P/E was 16.27, reported ROE 14.59% and forecast yield 1.99%. Planned annual dividends of at least ¥44 complement capital efficiency and growth. [Results](https://disclosure.catr.jp/companies/bc6df/49567/tdnet/833b8/773787), [metrics](https://finance.yahoo.co.jp/quote/8001.T), [dividends](https://www.itochu.co.jp/ja/ir/shareholder/dividend/index.html)."
+      "ja": "2026/9/30午前の予想PER8.38倍、予想配当利回り3.05%。実績PBR0.84倍、ROE8.23%、自己資本比率61.4%。26/12期中間期は前年同期比4.6%減収だが、低い株価倍率と財務余力を評価する資源分野の候補。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 8.38 and forecast dividend yield of 3.05%. Reported P/B was 0.84, ROE 8.23%, and equity ratio 61.4%. Although first-half revenue for FY ending December 2026 fell 4.6% year over year, low valuation multiples and financial capacity merit research as an energy-sector candidate. [Source](https://finance.yahoo.co.jp/quote/1605.T)"
      },
      "risk": {
-      "ja": "第1四半期の税引前利益は前年同期比1.3%減。投資先の業績悪化や調達金利上昇が利益を圧迫し、配当利回りも高くはない。",
-      "en": "First-quarter pretax profit fell 1.3% year over year. Weaker investee earnings or higher funding costs could pressure profits, while the dividend yield is not particularly high."
+      "ja": "中間利益の増加には税負担減少が寄与しており、減収を伴う点に注意。原油・ガス価格の下落や円高で利益が変動する。",
+      "en": "Lower tax expenses contributed to first-half profit growth despite declining revenue. Falling oil and gas prices or yen appreciation can materially affect earnings. [Source](https://finance.yahoo.co.jp/quote/1605.T)"
      },
      "rank": 15,
-     "score": 50
+     "score": 48
     },
     {
      "code": "8766.T",
@@ -2453,32 +2179,15 @@
       "en": "Tokio Marine Holdings, Inc."
      },
      "reason": {
-      "ja": "2027年3月期第1四半期の保険収益は前年同期比12.3%増、親会社帰属利益は3.3%増。2026年9月25日時点の予想PER18.41倍、配当利回り3.07%を踏まえ、収益拡大と配当を評価し、保険業への分散候補とする。",
-      "en": "Insurance revenue rose 12.3% and profit attributable to owners increased 3.3% year over year in the first quarter ending June 2026. At September 25, 2026, forward P/E was 18.41 and forecast yield 3.07%. Revenue expansion and dividends make it an insurance-sector diversification candidate. [Source](https://finance.yahoo.co.jp/quote/8766.T)."
+      "ja": "2026/9/30午前の予想PER18.25倍、予想配当利回り3.09%。実績PBR1.84倍、ROE8.15%、自己資本比率24.1%。27/3期第1四半期は保険収益が前年同期比12.3%増。保険業の特性を踏まえ、成長と配当を評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 18.25 and forecast dividend yield of 3.09%. Reported P/B was 1.84, ROE 8.15%, and equity ratio 24.1%. Insurance revenue rose 12.3% year over year in Q1 FY ending March 2027. Growth and dividends merit research, with financial ratios interpreted in an insurance-sector context. [Source](https://finance.yahoo.co.jp/quote/8766.T)"
      },
      "risk": {
-      "ja": "第1四半期の修正純利益は3.6%減。自然災害や保険金の単価上昇、運用市場の変動で利益が振れ、会計上の増益だけでは判断しにくい。",
-      "en": "First-quarter adjusted net income fell 3.6%. Natural catastrophes, claims inflation and investment-market movements can cause earnings volatility, so growth in accounting profit alone is insufficient."
+      "ja": "第1四半期の修正純利益は3.6%減少。自然災害による保険金増加や再保険料上昇、運用損益の変動に注意が必要。",
+      "en": "First-quarter adjusted net income declined 3.6%. Natural-catastrophe claims, higher reinsurance costs and fluctuations in investment results could put further pressure on earnings. [Source](https://finance.yahoo.co.jp/quote/8766.T)"
      },
-     "rank": 25,
-     "score": 25
-    },
-    {
-     "code": "4452.T",
-     "name": {
-      "ja": "Kao Corporation",
-      "en": "Kao Corporation"
-     },
-     "reason": {
-      "ja": "2026年中間期は売上高が前年同期比7.8%増、営業利益が38.5%増。2026年9月25日時点の予想配当利回り2.22%、実績ROE11.27%、自己資本比率56.7%から、業績回復と財務健全性を評価する日用品分野の候補。",
-      "en": "First-half 2026 revenue increased 7.8% and operating profit 38.5% year over year. At September 25, 2026, forecast dividend yield was 2.22%, while reported ROE was 11.27% and equity ratio 56.7%. Earnings recovery and financial strength support researching this consumer-products company for a balanced portfolio. [Source](https://finance.yahoo.co.jp/quote/4452.T)."
-     },
-     "risk": {
-      "ja": "中間期増益には土地売却益が寄与。予想PER23.54倍で割安感は限定的であり、一時利益を除いた収益改善の持続性に注意。",
-      "en": "Land-sale gains contributed to first-half profit growth. A forward P/E of 23.54 limits valuation appeal, making the sustainability of earnings improvement excluding one-off gains particularly important."
-     },
-     "rank": 18,
-     "score": 44
+     "rank": 2,
+     "score": 68
     },
     {
      "code": "6301.T",
@@ -2487,71 +2196,37 @@
       "en": "Komatsu Ltd."
      },
      "reason": {
-      "ja": "2027年3月期第1四半期の売上高は前年同期比14.7%増で通期予想も上方修正。2026年9月25日時点で予想PER19.63倍、配当利回り2.49%、実績自己資本比率54.7%。成長と財務、配当の組み合わせを評価する建機候補。",
-      "en": "First-quarter revenue for the year ending March 2027 rose 14.7% year over year, and full-year guidance was raised. At September 25, 2026, forward P/E was 19.63 and forecast dividend yield 2.49%, with reported equity ratio of 54.7%. Growth, financial strength and income support this construction-equipment research candidate. [Source](https://finance.yahoo.co.jp/quote/6301.T)."
+      "ja": "2026/9/30午前の予想PER19.17倍、予想配当利回り2.55%。実績PBR1.89倍、ROE11.26%、自己資本比率54.7%。27/3期第1四半期は前年同期比14.7%増収。割安さより売上成長と収益性、財務余力を評価。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 19.17 and forecast dividend yield of 2.55%. Reported P/B was 1.89, ROE 11.26%, and equity ratio 54.7%. Revenue rose 14.7% year over year in Q1 FY ending March 2027. The research case emphasizes growth, profitability and financial capacity more than cheap valuation. [Source](https://finance.yahoo.co.jp/quote/6301.T)"
      },
      "risk": {
-      "ja": "第1四半期の営業増益率は8.0%で増収率を下回る。コスト増に加え、資源・建設投資の減速や円高による利益圧迫に注意。",
-      "en": "First-quarter operating profit grew 8.0%, lagging revenue growth. Cost increases, weaker mining or construction investment, and yen appreciation could pressure margins and reduce earnings momentum."
+      "ja": "増収率に対して営業増益率は8.0%にとどまり、コスト増が重荷。建機需要の減速や円高で成長が鈍化する可能性がある。",
+      "en": "Operating profit grew only 8.0%, lagging revenue growth as costs increased. Slower construction-equipment demand and yen appreciation could further weaken growth. [Source](https://finance.yahoo.co.jp/quote/6301.T)"
      },
-     "rank": 9,
-     "score": 55
+     "rank": 16,
+     "score": 46
     },
     {
-     "code": "6501.T",
+     "code": "4063.T",
      "name": {
-      "ja": "Hitachi, Ltd.",
-      "en": "Hitachi, Ltd."
+      "ja": "Shin-Etsu Chemical Co., Ltd.",
+      "en": "Shin-Etsu Chemical Co., Ltd."
      },
      "reason": {
-      "ja": "2027年3月期第1四半期は売上収益20.0%増、調整後営業利益39.5%増。実績ROE12.93%、自己資本比率43.7%も踏まえ成長と収益性を評価。2026年9月25日時点の予想PERは27.58倍で、今期配当額・利回りは未確認。",
-      "en": "First-quarter revenue for the year ending March 2027 rose 20.0%, while adjusted operating profit increased 39.5%. Reported ROE of 12.93% and equity ratio of 43.7% support its growth and profitability case. Forward P/E was 27.58 on September 25, 2026; current-year dividend amount and yield remain unverified. [Results](https://www.hitachi.com/content/dam/hitachi/global/ja_jp/press/files/2026/07/0729/2026_1Q.pdf), [metrics](https://finance.yahoo.co.jp/quote/6501.T)."
+      "ja": "2026/9/30午前の予想PER20.84倍、予想配当利回り2.31%。実績PBR2.41倍、ROE10.41%、自己資本比率78.7%。27/3期第1四半期は前年同期比5.4%増収。電子材料の利益成長と厚い自己資本を評価する候補。",
+      "en": "On September 30, 2026, morning quotes showed forward P/E of 20.84 and forecast dividend yield of 2.31%. Reported P/B was 2.41, ROE 10.41%, and equity ratio 78.7%. Revenue rose 5.4% year over year in Q1 FY ending March 2027. Electronic-materials profit growth and a substantial equity base make it worth researching. [Source](https://finance.yahoo.co.jp/quote/4063.T)"
      },
      "risk": {
-      "ja": "親会社帰属利益は第1四半期に1.4%減。株価には成長期待が反映されており、受注や利益率が期待を下回ると評価低下の恐れ。",
-      "en": "First-quarter profit attributable to owners declined 1.4%. The valuation incorporates growth expectations, creating downside risk if orders or profit margins fall short of investor expectations."
-     },
-     "rank": 24,
-     "score": 38
-    },
-    {
-     "code": "2802.T",
-     "name": {
-      "ja": "Ajinomoto Co., Inc.",
-      "en": "Ajinomoto Co., Inc."
-     },
-     "reason": {
-      "ja": "2027年3月期第1四半期の売上高は前年同期比13.2%増、親会社帰属利益は13.1%増。実績ROE17.75%を評価する成長寄りの食品候補。2026年9月25日時点の予想PER39.12倍、配当利回り0.99%から価格には慎重さが必要。",
-      "en": "First-quarter revenue for the year ending March 2027 grew 13.2%, and profit attributable to owners increased 13.1%. Reported ROE of 17.75% supports this growth-oriented food-sector candidate. However, a forward P/E of 39.12 and forecast dividend yield of 0.99% on September 25, 2026, warrant price discipline. [Results](https://disclosure.catr.jp/companies/b7749/47233/tdnet/170c6/773534), [metrics](https://finance.yahoo.co.jp/quote/2802.T)."
-     },
-     "risk": {
-      "ja": "高PERと低配当利回りが弱点。原材料高や電子材料需要の減速で成長が鈍る場合、利益の減速以上に株価評価が下がる可能性。",
-      "en": "High P/E and low dividend yield are weaknesses. Raw-material inflation or slower electronic-materials demand could reduce growth, causing valuation compression beyond the underlying earnings slowdown."
+      "ja": "生活環境基盤材料の市況悪化が利益成長を抑制。PERとPBRには成長期待が含まれ、半導体需要が鈍ると株価調整リスクがある。",
+      "en": "Weak infrastructure-materials markets constrain profit growth. Valuation multiples embed growth expectations, creating share-price downside risk if semiconductor demand and related earnings momentum slow. [Source](https://finance.yahoo.co.jp/quote/4063.T)"
      },
      "rank": 21,
-     "score": 42
-    },
-    {
-     "code": "4502.T",
-     "name": {
-      "ja": "Takeda Pharmaceutical Company Limited",
-      "en": "Takeda Pharmaceutical Company Limited"
-     },
-     "reason": {
-      "ja": "2027年3月期第1四半期の売上収益は前年同期比10.2%増、営業利益は9.1%増。年間204円の配当予想と2026年9月25日時点の予想利回り3.42%を評価する医薬品候補。ただし実績ROEはマイナスで、収益性の回復確認を条件とした調査対象。",
-      "en": "First-quarter revenue for the year ending March 2027 rose 10.2%, and operating profit increased 9.1%. Forecast annual dividends of ¥204 and a 3.42% yield on September 25, 2026, support an income-oriented pharmaceutical research case. However, reported ROE is negative, making confirmation of a profitability recovery essential. [Results and metrics](https://finance.yahoo.co.jp/quote/4502.T), [dividends](https://www.takeda.com/jp/investors/stock-information/)."
-     },
-     "risk": {
-      "ja": "予想PER56.81倍、実績ROEはマイナス2.12%で割安・高収益とは言い難い。新薬開発の失敗や既存薬の競争激化にも注意。",
-      "en": "Forward P/E of 56.81 and reported ROE of negative 2.12% undermine claims of cheapness or strong profitability. Drug-development failures and intensifying competition for existing medicines add risk."
-     },
-     "rank": 19,
-     "score": 44
+     "score": 31
     }
    ]
   }
  },
- "ai_generated_at": "2026-09-28 07:46",
+ "ai_generated_at": "2026-09-30 10:24",
  "ai_conditions": {
   "market": {
    "ja": "日本株",
@@ -2565,10 +2240,10 @@
  },
  "commentary": {
   "text": {
-   "ja": "# 上位5銘柄の指標解説（2026年9月28日）\n\n## 1位 トヨタ自動車（7203.T）\n- **強み**：PERは8.5倍、PBRは0.95倍で、利益や純資産に比べて株価は低めです。配当利回りは3.35%、ROEは12.4%、売上成長率は10.4%で、割安さ・配当・収益性・成長のバランスが取れています。\n- **注意点**：米国の関税で利益率が下がっています。売上が伸びても利益は減っているため、低PERは「利益の先行きへの不安」を反映している可能性があります。自己資本比率37.8%は、金融事業（ローンやリース）を含む連結の数字なので、製造業としてそのまま比べないようにしましょう。\n- **確認すべきこと**：決算資料で、営業利益の増減要因（関税・為替・原価改善）、地域別の利益（特に北米）、自動車事業と金融事業それぞれの財務内容を確認しましょう。\n- 🔎 **直近の決算**：8月4日発表の第1四半期は、売上高が10.4%増の一方、営業利益は8.8%減の1.06兆円でした。関税と中東情勢がコストを押し上げています。ただし通期の営業利益予想は3.0兆円から3.4兆円に引き上げられ、自社株買いも発表されました。\n\n## 2位 CF Industries（CF）\n- **強み**：ROEは29.9%と高く、PERは8.5倍と低い水準です。売上成長率は17.6%で、7月には四半期配当を20%増やしています。\n- **注意点**：窒素肥料は市況で利益が大きく動く景気循環型の業種です。いまの高い利益は、イラン情勢による世界的な供給不足で販売価格が上がったことが大きく、「利益が一番大きい時期のPERは低く見える」点に注意が必要です。販売数量は前年同期比で15%減っていて、利益には保険金収入も含まれます。\n- **確認すべきこと**：アンモニアや尿素の価格の推移、原料である天然ガスの価格、販売数量が戻るかどうか、利益の中に一時的な要因がどれだけあるか。数年分の平均利益で見たPERも確認しましょう。\n- 🔎 **直近の決算**：第2四半期（8月発表）は、純利益が7.27億ドルで前年同期の約1.9倍、売上高は2.22億ドルではなく22.2億ドルで増収でした。一方で市場予想には届かず、決算後に株価は下がりました。\n\n## 3位 オリックス（8591.T）\n- **強み**：PERは11.0倍、PBRは1.43倍、配当利回りは2.75%、売上成長率は17.4%です。事業が分散した総合金融で、自社株買いにも積極的です。\n- **注意点**：直近の利益には、キオクシア株の売却益や評価益（約1,217億円）という一時的な利益が含まれていて、PERやROEが実力以上に良く見えている可能性があります。実際に、Yahoo!のデータ（ROE14.0%）とChatGPTの理由（ROE10.44%、予想PER12.77倍）で数値がずれています。自己資本比率24.9%は、借入れを使う金融業なので低めになるのが普通です。\n- **確認すべきこと**：一時的な利益を除いた「基礎利益」の推移、セグメント別の利益、新しい配当方針の中身、自社株買いの進み具合、金利上昇が資金調達コストに与える影響。\n- 🔎 **直近の決算**：8月6日発表の第1四半期は、純利益が過去最高の2,808億円（前年同期比+162%）でしたが、キオクシア関連の利益を除くと1,591億円です。同時に新しい配当方針が示されました。\n\n## 4位 積水ハウス（1928.T）\n- **強み**：PERは8.5倍、PBRは0.97倍で割安な水準です。配当利回りは4.33%と高く、14期連続で増配しています。ROEは12.3%、自己資本比率は42.7%で、財務も比較的安定しています。\n- **注意点**：売上成長率は−5.8%です。米国の戸建て事業が、住宅ローン金利の高止まりで苦戦しています。また、国内の都市再開発事業の好調は、物件売却のタイミングで利益が大きく変わるため、毎年続くとは限りません。住宅は金利や景気に左右されやすい業種です。\n- **確認すべきこと**：米国事業の受注や引き渡し件数、国内の受注残高、不動産売却益が利益に占める割合、配当性向と増配方針が続く見込みがあるか。\n- 🔎 **直近の決算**：9月10日発表の中間決算は、純利益が1,250億円（+23.1%）で中間期として過去最高でしたが、売上高は2.5%減の1兆9,656億円でした。米国戸建ての売上は17.8%減っています。\n\n## 5位 日本たばこ産業（2914.T）\n- **強み**：配当利回りは3.92%と高く、ROEは14.3%、自己資本比率は48.5%で財務は健全です。売上成長率も17.0%と高く、加熱式たばこ「Ploom」が伸びています。\n- **注意点**：PERは20.7倍、PBRは2.81倍で、上位5銘柄の中では割高です。売上の伸びには値上げと円安の効果が含まれています。たばこ規制の強化、ロシアなど海外事業のリスク、配当性向の高さ（配当を続けられるか）にも注意が必要です。\n- **確認すべきこと**：為替の影響を除いた成長率、地域別の利益、加熱式たばこの採算、配当性向と株主還元方針、ロシア事業の扱いや開示内容。\n- 🔎 **直近の決算**：7月30日発表の中間決算は、値上げ効果とPloomの好調で大幅な増収増益となり、通期予想（利益+29%など）が上方修正されました。\n\n## 全体の偏り\n上位5銘柄のうち4つが日本株で、「低PER・高配当」の割安株に大きく偏っています。自動車・肥料・住宅・金融と、関税・金利・地政学リスクなど景気の影響を受けやすい業種が中心で、IT・ヘルスケアなどの成長業種は入っていません。また、CFとオリックスは一時的な要因で利益が大きく見えている可能性があるため、スコアを単年度の数値だけで判断しないよう注意してください。",
-   "en": "# Indicator Guide for the Top 5 Stocks (September 28, 2026)\n\n## #1 Toyota Motor Corporation (7203.T)\n- **Strengths:** A PER of 8.5x and a PBR of 0.95x mean the share price is low compared with earnings and book value. With a 3.35% dividend yield, 12.4% ROE and 10.4% revenue growth, it balances value, income, profitability and growth.\n- **Risks:** US tariffs are squeezing margins. Revenue is rising while profit is falling, so the low PER may reflect worries about future earnings. The 37.8% equity ratio includes the financial-services arm (loans and leases), so don't compare it directly with pure manufacturers.\n- **What to check:** In the earnings materials, look at what drove operating profit up or down (tariffs, currency, cost cuts), profit by region (especially North America), and the separate financials of the auto and finance businesses.\n- 🔎 **Latest results:** Q1 results (August 4) showed revenue up 10.4% but operating profit down 8.8% to ¥1.06 trillion, as tariffs and the Middle East situation raised costs. Toyota still raised its full-year operating profit forecast from ¥3.0 trillion to ¥3.4 trillion and announced a share buyback.\n\n## #2 CF Industries Holdings, Inc. (CF)\n- **Strengths:** ROE is a high 29.9% and PER is a low 8.5x. Revenue grew 17.6%, and the quarterly dividend was raised 20% in July.\n- **Risks:** Nitrogen fertilizer is a cyclical business, so profits swing with market prices. Today's strong earnings come largely from higher selling prices caused by a global supply shortage linked to the Iran conflict. Keep in mind that PER looks lowest when profits are at their peak. Sales volumes fell 15% year on year, and earnings include insurance proceeds.\n- **What to check:** Ammonia and urea price trends, natural gas costs (the main raw material), whether volumes recover, and how much of the profit is one-off. Also look at PER based on average earnings over several years.\n- 🔎 **Latest results:** Q2 results (August) showed net earnings of $727 million, about 1.9x the prior year, on revenue of $2.22 billion, up from the prior year. Results still missed estimates, and the shares slipped afterward.\n\n## #3 ORIX Corporation (8591.T)\n- **Strengths:** PER is 11.0x, PBR 1.43x, dividend yield 2.75% and revenue growth 17.4%. It is a diversified financial group that actively buys back shares.\n- **Risks:** Recent profit includes about ¥121.7 billion of one-off gains from selling and revaluing its Kioxia stake, which can make PER and ROE look better than the underlying business. The data sources also disagree: Yahoo! shows ROE of 14.0%, while the ChatGPT note cites 10.44% ROE and a 12.77x forecast PER. The 24.9% equity ratio is normally low for a lender that funds itself with borrowing.\n- **What to check:** Underlying profit excluding one-off gains, profit by segment, details of the new dividend policy, progress on the buyback, and how rising interest rates affect funding costs.\n- 🔎 **Latest results:** Q1 results (August 6) showed record net income of ¥280.8 billion (+162%), or ¥159.1 billion excluding Kioxia-related gains. A new dividend policy was announced at the same time.\n\n## #4 Sekisui House, Ltd. (1928.T)\n- **Strengths:** PER of 8.5x and PBR of 0.97x are cheap levels. The dividend yield is a high 4.33%, with 14 straight years of dividend increases. ROE of 12.3% and an equity ratio of 42.7% point to a fairly stable balance sheet.\n- **Risks:** Revenue growth is −5.8%. The US single-family housing business is struggling because mortgage rates remain high. Strong results in Japanese urban redevelopment depend on when properties are sold, so they may not repeat every year. Housing is sensitive to interest rates and the economy.\n- **What to check:** US orders and home deliveries, the domestic order backlog, how much of profit comes from property sales, and the payout ratio and whether the dividend-growth policy can continue.\n- 🔎 **Latest results:** Interim results (September 10) showed record interim net profit of ¥125.0 billion (+23.1%), but revenue fell 2.5% to ¥1.97 trillion. US single-family sales dropped 17.8%.\n\n## #5 Japan Tobacco Inc. (2914.T)\n- **Strengths:** A high 3.92% dividend yield, 14.3% ROE and a 48.5% equity ratio show a healthy balance sheet. Revenue growth is also strong at 17.0%, helped by the Ploom heated-tobacco product.\n- **Risks:** At 20.7x PER and 2.81x PBR, it is the most expensive of the five. Revenue growth includes price increases and a weak yen. Watch for tighter tobacco regulation, risks in overseas businesses such as Russia, and the high payout ratio (whether the dividend can be sustained).\n- **What to check:** Growth excluding currency effects, profit by region, profitability of heated tobacco, the payout ratio and shareholder-return policy, and how the Russia business is handled and disclosed.\n- 🔎 **Latest results:** First-half results (July 30) showed a large rise in revenue and profit from price increases and strong Ploom sales, and the full-year forecast was raised (including profit up 29%).\n\n## Overall bias\nFour of the five are Japanese stocks, and the list leans heavily toward low-PER, high-dividend value stocks. Most are cyclical sectors (autos, fertilizer, housing, finance) exposed to tariffs, interest rates and geopolitical risk, while growth sectors such as tech and healthcare are missing. Also, CF and ORIX may look better than usual because of temporary factors, so don't judge the scores on a single year's numbers alone.\n\n---\n*This is an explanation of how to read the indicators. It is not a recommendation to buy or sell, and not a price forecast.*\n\nSources:\n- [Toyota: April–June 2026 Financial Results (Toyota Newsroom)](https://pressroom.toyota.com/tmc-announces-april-through-june-2026-financial-results/)\n- [Toyota boosts guidance, announces share buyback (Yahoo Finance)](https://finance.yahoo.com/markets/stocks/article/toyota-boosts-guidance-announces-6-billion-share-buyback-as-fiscal-q1-results-shine-170431398.html)\n- [CF Industries First Half 2026 Earnings](https://www.cfindustries.com/newsroom/2026/1h-2026-earnings)\n- [CF Industries Q2 2026 earnings miss (Investing.com)](https://www.investing.com/news/transcripts/earnings-call-transcript-cf-industries-misses-q2-2026-estimates-as-shares-slip-93CH-4843506)\n- [ORIX Q1 FY27.3 slides: record profit, new dividend policy (Investing.com)](https://www.investing.com/news/company-news/orix-q1-fy273-slides-record-profit-new-dividend-policy-93CH-4840351)\n- [ORIX Q1 earnings (BigGo Finance)](https://finance.biggo.com/news/JP_8591.T_2026-08-06)\n- [積水ハウス、中間期で過去最高益（中日新聞）](https://www.chunichi.co.jp/article/1309505)\n- [JT raises full-year outlook (Tobacco Journal International)](https://www.tobaccojournal.com/news/jt-raises-full-year-outlook-after-strong-first-half-2026-performance/)\n- [Japan Tobacco: Q2 2026 Results (Tobacco Insider)](https://tobaccoinsider.com/japan-tobacco-q2-2026-results/)"
+   "ja": "## 1位 トヨタ自動車（7203.T）\n- **強み**：PER 8.5倍、PBR 0.95倍と割安な水準です。配当利回り3.35%、ROE 12.4%もあり、割安さ・配当・収益力のバランスが取れています。\n- **注意点**：PER 8.5倍は過去の利益をもとにした数字です。会社は2027年3月期に純利益22%減（3期連続の減益）を見込んでいるため、予想ベースのPERはもっと高くなります。米国の関税、原油・資材価格の上昇、為替が主なリスクです。自己資本比率37.8%は金融子会社を連結しているためで、自動車事業だけの財務の強さとは分けて見る必要があります。\n- **確認すべきこと**：決算説明資料の「営業利益の増減要因」（関税・為替・原価改善）、地域別の販売台数、今期見通しの前提為替レート、配当方針と自社株買いの状況。\n- **確認した内容**：2026年3月期は営業利益が21.5%減の3.8兆円でした。関税による減益は約1.4兆円規模です（[トヨタイムズ](https://toyotatimes.jp/toyota_news/financial_results_2026/)、[ビジネス+IT](https://www.sbbit.jp/article/st/185316)）。\n\n## 2位 オリックス（8591.T）\n- **強み**：売上成長率17.4%、ROE 14.0%と、成長と収益力が両方高い水準です。PER 11.0倍、配当利回り2.75%も方針に合っています。\n- **注意点**：直近の大幅増益には、キオクシア株の売却益・評価益という一時的な利益が含まれています。そのため、ROEやPERが実力以上に良く見えている可能性があります。自己資本比率24.9%はリース・金融業としては普通の水準ですが、金利や信用コストの影響を受けやすい業種です。\n- **確認すべきこと**：一時的な利益を除いた「調整後当期純利益」、セグメント別の利益（保険・不動産・事業投資など）、新しい配当方針（調整後利益の39%か前期配当のどちらか高い方）で配当がどう決まるか。\n- **確認した内容**：2027年3月期第1四半期（2026年8月6日発表）は、純利益が2.6倍の2,808億円でした。ただし本業の事業利益の伸びは約+11.7%にとどまります（[決算短信](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260806/20260804508735.pdf)、[解説記事](https://note.com/fundamental_lab/n/na3987f9d5522)）。\n\n## 3位 積水ハウス（1928.T）\n- **強み**：配当利回り4.33%と上位5銘柄で最も高く、長く増配を続けています。PBR 0.97倍、自己資本比率42.7%と、割安さと財務の安定性があります。\n- **注意点**：売上成長率は-5.8%です。米国の一戸建て事業が住宅ローン金利の高止まりで不振で、利益は国内の都市再開発での物件売却が支えています。物件売却の利益は年によって大きく変わるため、増益が続くかは慎重に見る必要があります。取得データのPER 8.5倍と、ChatGPTが挙げた予想PER 9.75倍には差があります。また、Claudeの理由にある「2026年1月期…16.0%増」は、実際には2026年2〜7月の中間期（2027年1月期の上期）の数字のようで、どの期の数字かを確認したほうがよいです。\n- **確認すべきこと**：米国事業の引き渡し戸数と利益率、都市再開発の売却益への依存度、配当性向、借入金の推移。\n- **確認した内容**：2026年2〜7月の中間期は、純利益が23.1%増の1,250億円で中間期として過去最高でした。一方、売上高は2.5%減、米国の一戸建て事業の売上高は17.8%減でした（[中日新聞](https://www.chunichi.co.jp/article/1309505)）。\n\n## 4位 Alphabet（GOOGL）\n- **強み**：ROE 48.7%、売上成長率24.2%、自己資本比率69.8%と、収益力・成長・財務のすべてが高い水準です。クラウド事業の成長も加速しています。\n- **注意点**：PBR 6.76倍、配当利回り0.26%で、割安さや配当を重視する指標では点数が低くなります。直近の利益には投資先の評価益などが含まれているとみられ、アナリストの予想では2027年のEPS（1株利益）は2026年より低くなっています。そのためPER 17.3倍が割安に見えすぎている可能性があります。広告技術をめぐる独占禁止法の命令、AIへの巨額投資、日本の投資家にとっては円ドルの為替リスクもあります。\n- **確認すべきこと**：10-Q（米国の四半期報告書）で営業利益と営業外損益（有価証券の評価益）の内訳、設備投資額とフリーキャッシュフロー、Google Cloudの利益率、規制関連の訴訟の進み具合。\n- **確認した内容**：2026年第2四半期は売上高1,198億ドル（前年比+24.2%）、Google Cloudは前年比82%増でした。米連邦裁判所は広告技術事業に是正措置を命じています（[SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm)、[ad-hoc-news](https://www.ad-hoc-news.de/boerse/news/corporate-news/alphabet-a-stock-gains-as-q2-2026-ai-investments-reshape-earnings-and/70117531)）。\n\n## 5位 長谷工コーポレーション（1808.T）\n- **強み**：配当利回り3.66%、売上成長率9.2%、ROE 11.6%と、配当と成長のバランスが取れています。総還元性向50%という株主還元方針もはっきりしています。\n- **注意点**：分譲マンションの建設に集中しているため、建設資材や人件費の上昇、マンション需要の変化、金利の上昇の影響を受けやすいです。Claudeの理由は2026年3月期第3四半期時点の情報で、その後、通期決算と今期第1四半期決算が出ています。PBRも取得データの1.27倍と引用元の1.36倍で差があります。\n- **確認すべきこと**：完成工事総利益率（工事の粗利率）の推移、受注残高、2027年3月期の会社予想に対する進み具合、総還元性向50%の実績。\n- **確認した内容**：2027年3月期第1四半期（2026年8月6日発表）の経常利益は約305億円でした。詳しい内訳は[決算短信](https://www.haseko.co.jp/hc/ir/library/earnings.html)と[IFIS株予報](https://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report&bcode=1808)で確認できます。\n\n## 上位銘柄全体の偏り\n5銘柄のうち4銘柄が日本株で、住宅関連（積水ハウス・長谷工）が2銘柄を占めています。そのため、国内の金利や住宅市況の影響が重なりやすい構成です。指標の面では、低PER・高配当の割安寄りの銘柄が中心で、成長性を担っているのは実質的にAlphabetだけです。また、トヨタ・オリックス・Alphabetは一時的な利益や予想の減益によって、PERが実態より良く見えている可能性があり、予想ベースの数字でも見直すことをおすすめします。",
+   "en": "## #1 Toyota Motor Corporation (7203.T)\n- **Strengths**: PER of 8.5x and PBR of 0.95x are cheap levels. With a 3.35% dividend yield and 12.4% ROE, it balances value, income and profitability.\n- **Risks**: The 8.5x PER is based on past earnings. The company expects net income to fall 22% in FY3/2027, its third straight year of decline, so the PER based on forecast earnings is higher. The main risks are US tariffs, higher oil and material costs, and exchange rates. The 37.8% equity ratio reflects the consolidated finance subsidiary, so it should be read separately from the financial strength of the auto business alone.\n- **Check before considering**: The operating profit bridge in the earnings presentation (tariffs, FX, cost reductions), unit sales by region, the exchange rate assumed in this year's outlook, and the dividend policy and share buybacks.\n- **Verified**: In FY3/2026, operating profit fell 21.5% to ¥3.8 trillion. The tariff hit was about ¥1.4 trillion ([Toyota Times](https://toyotatimes.jp/toyota_news/financial_results_2026/), [SBBIT](https://www.sbbit.jp/article/st/185316)).\n\n## #2 ORIX Corporation (8591.T)\n- **Strengths**: Revenue growth of 17.4% and ROE of 14.0% show both growth and profitability. The 11.0x PER and 2.75% yield also fit the policy.\n- **Risks**: The recent jump in profit includes one-off gains from selling and revaluing Kioxia shares. This may make ROE and PER look better than the company's underlying earnings power. A 24.9% equity ratio is normal for a leasing and finance company, but the business is sensitive to interest rates and credit costs.\n- **Check before considering**: Adjusted net income without the one-off gains, profit by segment (insurance, real estate, business investment, etc.), and how dividends are set under the new policy (39% of adjusted net income or the prior-year dividend, whichever is higher).\n- **Verified**: In Q1 of FY3/2027 (reported Aug 6, 2026), net income rose 2.6x to ¥280.8 billion. However, profit from core operations grew only about 11.7% ([earnings release](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260806/20260804508735.pdf), [analysis](https://note.com/fundamental_lab/n/na3987f9d5522)).\n\n## #3 Sekisui House, Ltd. (1928.T)\n- **Strengths**: Its 4.33% dividend yield is the highest of the top five, and it has a long record of dividend increases. PBR of 0.97x and an equity ratio of 42.7% show value and financial stability.\n- **Risks**: Revenue growth is -5.8%. The US single-family business is weak because mortgage rates remain high, and profit is being supported by property sales in domestic urban redevelopment. Gains from property sales vary a lot from year to year, so it is not certain that profit growth will continue. The fetched PER of 8.5x differs from the 9.75x forward PER cited in the ChatGPT reason. Also, the \"FY1/2026 … +16.0%\" figures in the Claude reason appear to be from the February–July 2026 half (first half of FY1/2027), so the reporting period should be confirmed.\n- **Check before considering**: US home deliveries and margins, how much profit depends on redevelopment sale gains, the payout ratio, and the trend in borrowings.\n- **Verified**: For the February–July 2026 half, net income rose 23.1% to ¥125.0 billion, a record for a first half. Revenue fell 2.5%, and US single-family revenue fell 17.8% ([Chunichi Shimbun](https://www.chunichi.co.jp/article/1309505)).\n\n## #4 Alphabet Inc. (GOOGL)\n- **Strengths**: ROE of 48.7%, revenue growth of 24.2% and an equity ratio of 69.8% are all high, covering profitability, growth and financial strength. Growth in the cloud business is also speeding up.\n- **Risks**: PBR of 6.76x and a 0.26% yield score low on value and dividend measures. Recent earnings appear to include gains such as revaluations of investment holdings, and analysts expect 2027 EPS (earnings per share) to be lower than 2026. That means the 17.3x PER may make the stock look cheaper than it is. Other risks are the antitrust order on its ad-tech business, heavy AI spending, and, for Japanese investors, yen/dollar currency risk.\n- **Check before considering**: In the 10-Q (the US quarterly report), the split between operating income and non-operating items (gains on securities), capital spending and free cash flow, Google Cloud's margin, and the progress of regulatory lawsuits.\n- **Verified**: In Q2 2026, revenue was $119.8 billion (+24.2% year over year), and Google Cloud grew 82% year over year. A US federal court has ordered changes to the ad-tech business ([SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm), [ad-hoc-news](https://www.ad-hoc-news.de/boerse/news/corporate-news/alphabet-a-stock-gains-as-q2-2026-ai-investments-reshape-earnings-and/70117531)).\n\n## #5 HASEKO Corporation (1808.T)\n- **Strengths**: A 3.66% dividend yield, 9.2% revenue growth and 11.6% ROE give a balance of income and growth. Its shareholder return policy is also clear: a 50% total return ratio.\n- **Risks**: Because it focuses on building condominiums for sale, it is exposed to rising material and labor costs, changes in condominium demand, and higher interest rates. The Claude reason uses information from Q3 of FY3/2026, and the full-year results and Q1 results for this year have come out since then. The PBR also differs: 1.27x in the fetched data versus 1.36x in the cited source.\n- **Check before considering**: The trend in gross margin on completed construction, the order backlog, progress against the company's FY3/2027 forecast, and whether the 50% total return ratio has been met in practice.\n- **Verified**: In Q1 of FY3/2027 (reported Aug 6, 2026), ordinary profit was about ¥30.5 billion. Details are in the [earnings releases](https://www.haseko.co.jp/hc/ir/library/earnings.html) and on [IFIS](https://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report&bcode=1808).\n\n## Overall bias of the top picks\nFour of the five picks are Japanese stocks, and two (Sekisui House and HASEKO) are in housing. This means domestic interest rates and the housing market can affect several of them at once. On the metrics, most picks lean toward value (low PER, high dividend), and Alphabet is effectively the only growth pick. Also, one-off gains or expected profit declines may make the PER of Toyota, ORIX and Alphabet look better than it really is, so it is worth rechecking them on forecast earnings."
   },
-  "generated_at": "2026-09-28 07:18"
+  "generated_at": "2026-09-28 07:54"
  },
  "titles": {
   "ja": "銘柄えらび帳 公開版",
